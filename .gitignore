@@ -1,0 +1,4 @@
+# Compass, Node, Bower
+node_modules
+app/bower_components
+npm-debug.log
