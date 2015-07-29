@@ -2,7 +2,7 @@
 
 var gulp = require('gulp');
 var gutil = require('gulp-util');
-var p = require('gulp-load-plugins');
+var p = require('gulp-load-plugins')();
 var gulpif = p.if;
 var pngquant = require('imagemin-pngquant');
 var request = require('request');
@@ -30,6 +30,7 @@ var banner = ['/**',
     ' * @link https://github.com/hugofqueiros/html5',
     ' */'
 ].join('\n');
+var startTime;
 
 /***********************
  * UTILS
@@ -46,8 +47,6 @@ var AUTOPREFIXER_BROWSERS = [
     'android >= 4.4',
     'bb >= 10'
 ];
-
-var startTime;
 var bundleLogger = {
     start: function() {
         startTime: process.hrTime();
@@ -61,10 +60,12 @@ var bundleLogger = {
 };
 
 function watch() {
-    gulp.watch(['app/scripts/**/*.js', 'scripts', reload]);
-    gulp.watch(['app/styles/**/*.{less, css}', 'styles', reload]);
-    gulp.watch([''])
-};
+    gulp.watch(['app/scripts/**/*.js'],
+        ['scripts', reload]);
+    gulp.watch(['app/styles/**/*.{less, css}'],
+        ['styles', reload]);
+    gulp.watch(['app/*.html']);
+}
 
 /***********************
  * DEVELOPMENT TASKS
@@ -97,6 +98,7 @@ gulp.task('scripts', function() {
 
 gulp.task('styles', function() {
     browserSync.notify('Running: styles');
+
 
 });
 
@@ -147,7 +149,7 @@ gulp.task('cache', function(done) {
 });
 
 gulp.task('clean', function() {
-
+    del.bind(null, ['dist'], {dot: true});
 });
 
 gulp.task('metadata', function() {
@@ -159,7 +161,8 @@ gulp.task('metadata', function() {
  *************************/
 
 gulp.task('mocha', ['styles'], function() {
-
+    return gulp.src('./test/index.html')
+        .pipe(p.mochaPhantomjs({reporter: 'tap'}));
 });
 
 gulp.task('test', ['jshint', 'jscs', 'mocha']);
