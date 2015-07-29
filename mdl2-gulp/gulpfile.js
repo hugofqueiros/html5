@@ -2,8 +2,9 @@
 
 var gulp = require('gulp');
 var gutil = require('gulp-util');
-var $ = require('gulp-load-plugins');
-var gulpif = $.if;
+var p = require('gulp-load-plugins');
+var gulpif = p.if;
+var pngquant = require('imagemin-pngquant');
 var request = require('request');
 var del = require('del');
 var fs = require('fs');
@@ -27,8 +28,7 @@ var banner = ['/**',
     ' * @license <%= pkg.license %>',
     ' * @copyright 2015 Hugo Queirós',
     ' * @link https://github.com/hugofqueiros/html5',
-    ' */',
-    ''
+    ' */'
 ].join('\n');
 
 /***********************
@@ -74,17 +74,17 @@ function watch() {
 gulp.task('jshint', function() {
     return gulp.src(['app/scripts/**/+.js', 'gulpfile.js'])
         .pipe(reload({stream: true, once: true}))
-        .pipe($.jshint())
-        .pipe($.jshint.reporter('jshint-stylish'))
-        .pipe(gulpif(!browserSync.active, $.jshint.reporter('fail')));
+        .pipe(p.jshint())
+        .pipe(p.jshint.reporter('jshint-stylish'))
+        .pipe(gulpif(!browserSync.active, p.jshint.reporter('fail')));
 });
 
 // Lint JS code style
 gulp.task('jscs', function() {
     return gulp.src(['src/**/*.js', 'gulpfile.js'])
         .pipe(reload({stream: true, once: true}))
-        .pipe($.jscs())
-        .pipe(gulpif(!browserSync.active, $.jshint.reporter('fail')));
+        .pipe(p.jscs())
+        .pipe(gulpif(!browserSync.active, p.jshint.reporter('fail')));
 });
 
 /************************
@@ -96,5 +96,72 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('styles', function() {
+    browserSync.notify('Running: styles');
 
 });
+
+gulp.task('images', function() {
+    browserSync.notify('Running: images');
+    return gulp.src('app/images/**/*.{png,jpg,jpeg,gif}')
+        .pipe(p.imagemin({
+            optimizationLevel: 3,
+            progressive:       true,
+            interlaced:        true,
+            verbose:           true,
+            use:               [pngquant()]
+        }))
+        .pipe(gulp.dest('build/images'))
+        .pipe(p.size({title: 'images'}))
+        .pipe(reload({stream: true}));
+});
+
+gulp.task('svgs', function() {
+    browserSync.notify('Running: svgs');
+    return gulp.src('app/svgs/**/*.svg')
+        .pipe(p.cache(p.imagemin({
+            multipass: true,
+            svgoPlugins: [{
+                removeDesc: true
+            }]
+        })))
+        .pipe(p.svgstore({inlineSvg: true}))
+        .pipe(p.cheerio(function($) {
+            $('svg').attr('style', 'display:none');
+        }))
+        .pipe(p.rename('symbols.svg'))
+        .pipe(gulp.dest('build/svg'))
+        .pipe(p.size({title: 'svgs', showFiles: true}))
+        .pipe(reload({stream: true}));
+});
+
+gulp.task('fonts', function() {
+    browserSync.notify('Running: fonts');
+    return gulp.src(['app/fonts/**'])
+        .pipe(gulp.dest('build/fonts'))
+        .pipe(p.size({title: 'fonts'}))
+        .pipe(reload({stream: true})); // !?!? on task watch it as a reload
+});
+
+gulp.task('cache', function(done) {
+    return p.cache.clearAll(done); 
+});
+
+gulp.task('clean', function() {
+
+});
+
+gulp.task('metadata', function() {
+
+});
+
+/*************************
+ * TEST TASKS
+ *************************/
+
+gulp.task('mocha', ['styles'], function() {
+
+});
+
+gulp.task('test', ['jshint', 'jscs', 'mocha']);
+
+
