@@ -1,5 +1,5 @@
 {
-  "preset": "mdl2",
+  "preset": "google",
   "fileExtensions": [".js", "jscs"],
 
   "requireCurlyBraces": ["if", "else", "for", "while", "do", "try", "catch"],

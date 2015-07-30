@@ -1,0 +1,15 @@
+{
+  "name": "commonjs",
+  "version": "1.0.0",
+  "description": "useful CommonJS modules - utils",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "useful",
+    "commonjs"
+  ],
+  "author": "Hugo Queirós",
+  "license": "MIT"
+}
