@@ -39,6 +39,8 @@ var del = require('del');
 var sequence = require('run-sequence');
 var Server = require('karma').Server;
 
+var startTime;
+
 var libs = [
     'jquery',
     'underscore',
@@ -108,13 +110,13 @@ gulp.task('setWatch', function() {
 });
 
 gulp.task('build', ['clean-build'], function (cb) {
-    /* sequence(
+     sequence(
      'less',
      'images',
-     'svg',
+/*     'svg',*/
      'fonts',
      'copy',
-     'js', cb);*/
+     'js', cb);
 });
 
 gulp.task('clean-build', function (cb) {
@@ -123,6 +125,27 @@ gulp.task('clean-build', function (cb) {
 
 gulp.task('less', function() {
     bsync.notify('Compiling Less files... Please Wait');
+
+    var combiner = require('stream-combiner2');
+    var stream = combiner.obj([
+        gulp.src('./app/styles/style.less'),
+        p.sourcemaps.init(),
+        p.less(),
+        cleancss(),
+        p.autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade:  false
+        }),
+        p.sourcemaps.write('.', {includeContent: false, sourceRoot: './app/styles'}),
+        gulp.dest('build/styles'),
+        p.size({title: 'CSS', showFiles: true}),
+        p.filter('**/*.css'), // Filtering stream to only css files
+        reload({stream: true})
+    ]);
+
+    stream.on('error', handleError);
+
+    return stream;
 });
 
 gulp.task('fonts', function() {
@@ -133,15 +156,85 @@ gulp.task('fonts', function() {
 });
 
 gulp.task('images', function () {
-
+    return gulp.src('app/img/**/*.{png,jpg,jpeg,gif}')
+        .pipe(p.imagemin({
+            optimizationLevel: 3,
+            progressive:       true,
+            interlaced:        true,
+            verbose:           true,
+            use:               [pngquant()]
+        }))
+        .pipe(gulp.dest('build/images'))
+        .pipe(p.size({title: 'images'}))
+        .pipe(reload({stream: true}));
 });
 
 gulp.task('svg', function () {
 
 });
 
-gulp.task('js', function() {
+gulp.task('js', ['js-vendor'], function() {
+    var bundler = browserify({
+        entries: ['./app/main.js'],
+        debug:   true,        // Enable source maps!
+        //fullPaths   : true,
+        //paths :['./node_modules','./app/scripts/']
+    });
 
+    // Transforms
+    bundler.transform('jstify', {
+        engine:       'lodash',
+        templateOpts: {
+            variable: 'data'
+        }
+    });
+
+    // Externals
+    libs.forEach(function(lib) {
+        bundler.external(lib);
+    });
+
+    var bundle = function() {
+        if (global.isWatching) {
+            bundleLogger.start();
+        }
+        return bundler
+            .bundle()
+            .on('error', handleError)
+            .pipe(source('app.js'))
+            .pipe(buffer())
+            .pipe(p.sourcemaps.init({loadMaps: true}))
+            .pipe(p.sourcemaps.write('.', {includeContent: false, sourceRoot: '.'}))
+            .pipe(gulp.dest('./build/scripts'))
+            .on('end', function() {
+                if (global.isWatching) {
+                    bundleLogger.end();
+                }
+                bsync.reload();
+            })
+            .pipe(p.size({title: 'JS'}));
+    };
+
+    if (global.isWatching) {
+        bundler = watchify(bundler, {poll: true});
+        bundler.on('update', bundle); // Rebundle with watchify on changes.
+    }
+    return bundle();
+});
+
+gulp.task('js-vendor', function() {
+    var b = browserify();
+
+    libs.forEach(function(lib) {
+        b.require(lib);
+    });
+
+    return b.bundle()
+        .on('error', handleError)
+        .pipe(source('vendor.js'))
+        .pipe(buffer())
+        .pipe(gulp.dest('./build/scripts'))
+        .pipe(p.size({title: 'JS Vendor'}));
 });
 
 gulp.task('copy', function() {
