@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "tutorial 1",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
+    "devDependencies": {},
   "dependencies": {
     "body-parser": "^1.4.3",
     "express": "^4.4.5"
