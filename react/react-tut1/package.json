@@ -1,0 +1,27 @@
+{
+  "name": "react-tut1",
+  "version": "1.0.0",
+  "description": "tutorial 1",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.4.3",
+    "express": "^4.4.5"
+  },
+  "keywords": [
+    "react",
+    "tutorial",
+    "comment",
+    "example"
+  ],
+  "author": "hugo queiros",
+  "license": "ISC",
+  "homepage": "https://github.com/reactjs/react-tutorial",
+  "engines" : {
+    "node" : "0.12.x"
+  }
+}
