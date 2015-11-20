@@ -1,0 +1,78 @@
+{
+  "name": "swcat",
+  "version": "1.0.0",
+  "description": "star wars catalog",
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "rm -rf build && rm -rf node_modules",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hugofqueiros/swcat.git"
+  },
+  "keywords": [
+    "star",
+    "wars",
+    "bynder",
+    "catalog"
+  ],
+  "author": "Hugo Queirós",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hugofqueiros/swcat/issues"
+  },
+  "homepage": "https://github.com/hugofqueiros/swcat",
+  "browser": {
+    "selectize": "./node_modules/selectize/dist/js/selectize.js"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.7.13",
+    "browserify": "^10.2.4",
+    "del": "^1.2.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-filter": "^2.0.2",
+    "gulp-gzip": "^1.1.0",
+    "gulp-if": "^1.2.5",
+    "gulp-imagemin": "^2.3.0",
+    "gulp-less": "^3.0.3",
+    "gulp-load-plugins": "^1.0.0-rc.1",
+    "gulp-minify-css": "^1.2.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-size": "^1.2.3",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-tar": "^1.4.0",
+    "gulp-uglify": "^1.2.0",
+    "gulp-useref": "^1.2.0",
+    "gulp-util": "^3.0.6",
+    "gulp-zopfli": "^1.0.0",
+    "jstify": "^0.11.0",
+    "merge-stream": "^0.1.8",
+    "node-webkit-builder": "^1.0.12",
+    "pretty-hrtime": "^1.0.0",
+    "request": "^2.58.0",
+    "run-sequence": "^1.1.1",
+    "stream-combiner2": "^1.0.2",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.2.3"
+  },
+  "dependencies": {
+    "URIjs": "^1.15.2",
+    "backbone": "^1.2.1",
+    "backbone.marionette": "^2.4.2",
+    "bootstrap": "^3.3.5",
+    "jquery": "^2.1.4",
+    "lodash": "^3.10.0",
+    "microplugin": "0.0.3",
+    "moment": "^2.10.3",
+    "moment-timezone": "^0.4.0",
+    "page": "^1.6.3",
+    "selectize": "brianreavis/selectize.js#v0.11.2",
+    "sifter": "^0.4.1",
+    "underscore": "^1.8.3"
+  }
+}

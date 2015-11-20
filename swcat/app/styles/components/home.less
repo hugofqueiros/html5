@@ -1,0 +1,123 @@
+.home-section {
+  width: 100%;
+  height: 100%;
+  font: 700 1em "Star Wars", sans-serif;
+  letter-spacing: .15em;
+  color: @starWarsColor;
+  overflow: hidden;
+  margin: 0;
+}
+
+.starwars section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+}
+
+.starwars .intro {
+  width: 15em;
+  margin: 0 0 0 -7.5em;
+  font-size: 200%;
+  font-weight: 400;
+  opacity: 0;
+  animation: intro 6s ease-out 1s;
+}
+
+.starwars .logo {
+  transform: scale(0.1);
+  opacity: 0;
+  animation: logo 9s ease-out 9s;
+}
+
+.starwars .logo svg {
+  width: inherit;
+}
+
+.starwars .titles {
+  width: 14.65em;
+  margin: 0 0 0 -7.325em;
+  top: auto;
+  bottom: 0;
+  height: 50em;
+  font-size: 300%;
+  text-align: justify;
+  overflow: visible;
+  transform-origin: 50% 100%;
+  transform: perspective(300px) rotateX(25deg);
+}
+
+.starwars .titles > div {
+  position: absolute;
+  top: 100%;
+  animation-name: titles;
+  animation-duration: 81s;
+  animation-delay: 13s;
+  animation-timing-function: linear;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}
+
+.starwars .titles > div > p {
+  margin: 1.35em 0 1.85em 0;
+  line-height: 1.35em;
+  backface-visibility: hidden;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.starwars .titles .titles-header {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+@keyframes intro {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes logo {
+  0% {
+    width: 18em;
+    margin: -9em 0 0 -9em;
+    transform: scale(2.75);
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+    width: 18em;
+    margin: -9em 0 0 -9em;
+  }
+  100% {
+    transform: scale(0.1);
+    opacity: 0;
+    width: 18em;
+    margin: -9em 0 0 -9em;
+    overflow: hidden;
+    visibility: collapse;
+  }
+}
+
+@keyframes titles {
+  0% {
+    top: 100%;
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    top: 20%;
+    opacity: 0;
+  }
+}
