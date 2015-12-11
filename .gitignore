@@ -3,24 +3,6 @@ node_modules
 bower_components
 npm-debug.log
 
-Skip to content
-This repository  
-Search
-Pull requests
-Issues
-Gist
- @hugofqueiros
- Watch 106
-  Star 906
-  Fork 307 AngularClass/angular2-webpack-starter
- Code  Issues 10  Pull requests 1  Wiki  Pulse  Graphs
-Branch: master Find file Copy pathangular2-webpack-starter/.gitignore
-b785b7f  on Oct 1
-@asgerjensen asgerjensen Added typedoc configuration and run target
-3 contributors @gdi2290 @SekibOmazic @asgerjensen
-RawBlameHistory    55 lines (41 sloc)  699 Bytes
-# @AngularClass
-
 # Logs
 logs
 *.log
