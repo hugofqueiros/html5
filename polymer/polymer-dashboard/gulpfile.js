@@ -45,7 +45,7 @@ var optimizeHtmlTask = function(src, dest) {
     // In case still using useref build blocks
     .pipe($.if('*.css', $.minifyCss()))
     //.pipe(assets.restore())
-    //.pipe($.useref())
+    .pipe($.useref())
     .pipe($.if('*.html', $.minifyHtml({
       quotes: true,
       empty: true,
