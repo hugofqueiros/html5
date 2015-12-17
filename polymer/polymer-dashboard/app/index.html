@@ -19,7 +19,8 @@
   <!-- Add to homescreen for Chrome on Android -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="application-name" content="Polymer Dashboard">
-  <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+  <!--<link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">-->
+  <link rel="shortcut icon" sizes="1024x1024" href="images/favicon.png">
 
   <!-- Add to homescreen for Safari on iOS -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -49,13 +50,18 @@
 <span id="browser-sync-binding"></span>
 <template is="dom-bind" id="app">
 
-  <paper-drawer-panel id="paperDrawerPanel">
+  <paper-drawer-panel id="paperDrawerPanel" responsive-width="1024px">
     <!-- Drawer Scroll Header Panel -->
     <paper-scroll-header-panel drawer fixed>
 
       <!-- Drawer Toolbar -->
       <paper-toolbar id="drawerToolbar">
-        <span class="paper-font-title">Menu</span>
+        <a data-route="home" href="{{baseUrl}}" class="paper-font-title" layout horizontal center>
+          <div id="logo-container" style="display: flex">
+            <img src="images/lockup.svg" alt="Polymer Dashboard Menu">
+          </div>
+<!--          Menu-->
+        </a>
       </paper-toolbar>
 
       <!-- Drawer Content -->
@@ -85,7 +91,6 @@
           <span>Users</span>
         </a>
 
-
         <a data-route="contact" href="{{baseUrl}}contact">
           <iron-icon icon="mail"></iron-icon>
           <span>Contact</span>
@@ -100,6 +105,11 @@
       <paper-toolbar id="mainToolbar" class="tall">
         <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
         <span class="flex"></span>
+
+        <!-- Application name -->
+        <div class="top top-container center horizontal layout">
+          <div class="top-title">Hugo Queirós</div>
+        </div>
 
         <!-- Toolbar icons -->
         <paper-icon-button icon="refresh"></paper-icon-button>
@@ -172,7 +182,7 @@
           </section>
 
           <section data-route="overview">
-            <paper-material elevation="4">
+            <paper-material elevation="1">
               <h2 class="page-title">Overview</h2>
             </paper-material>
           </section>

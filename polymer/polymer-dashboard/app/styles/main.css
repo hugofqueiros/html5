@@ -3,3 +3,18 @@ body {
     font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     color: #333;
 }
+
+#logoContainer {
+  display: flex !important;
+  align-content: space-around;
+}
+
+#logoContainer img {
+  align-content: center;
+}
+
+/*
+#drawerToolbar {
+  margin-top: 10px;
+}
+*/
