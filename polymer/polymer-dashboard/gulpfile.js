@@ -104,6 +104,12 @@ gulp.task('images', function() {
   return imagesTask('app/images/**/*', dist('images'));
 });
 
+gulp.task('svgs', function() {
+    return gulp.src('app/svgs/**/*')
+      .pipe(gulp.dest(dist('svgs')))
+      .pipe($.size({title: 'svgs'}));
+});
+
 // Copy all files at the root level (app)
 gulp.task('copy', function() {
   var app = gulp.src([
@@ -220,6 +226,7 @@ gulp.task('serve', ['styles', 'elements', 'images'], function() {
   gulp.watch(['app/elements/**/*.css'], ['elements', reload]);
   gulp.watch(['app/{scripts,elements}/**/{*.js,*.html}'], ['lint']);
   gulp.watch(['app/images/**/*'], reload);
+  gulp.watch(['app/svgs/**/*'], reload);
 });
 
 // Build and serve the output from the dist build
@@ -251,7 +258,7 @@ gulp.task('default', ['clean'], function(cb) {
   runSequence(
     ['copy', 'styles'],
     'elements',
-    ['images', 'fonts', 'html'], //'lint',
+    ['images', 'svgs', 'fonts', 'html'], //'lint',
     'vulcanize', // 'cache-config',
     cb);
 });
