@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dynamic SVG Background Pattern Maker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<form action="#" id="patterncontrols">
+    <label for="radius">Radius</label>
+    <input type="range" min="1" max="200" value="100" id="radius"/>
+    <br>
+    <label for="thickness">Thickness</label>
+    <input type="range" min="1" max="20" value="2" id="thickness"/>
+    <br>
+    <label for="spacing">Spacing</label>
+    <input type="range" min="10" max="200" value="125" id="spacing"/>
+    <br>
+    <label for="circColor">Color</label>
+    <input type="color" value="#ffffff" id="circColor"/>
+    <br>
+    <label for="sizing">Size</label>
+    <input type="range" min="50" max="500" value="250" id="sizing"/>
+    <br>
+</form>
+<script>
+    function svg() {
+        var radius = document.getElementById("radius").value;
+        var thickness = document.getElementById("thickness").value;
+        var spacing = document.getElementById("spacing").value;
+        var circColor = document.getElementById("circColor").value;
+        var sizing = document.getElementById("sizing").value;
+        var svgString = '<svg xmlns="http://www.w3.org/2000/svg" ' +
+                'xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" ' +
+                'id="linkedcircles"><defs><pattern id="chainedcircles" patternUnits="userSpaceOnUse" ' +
+                'width="' + sizing + '" height="' + sizing + '"><circle cx="' + (sizing / 2) + '" cy="' +
+                (sizing / 2) + '" r="' + radius + '" stroke-width="' + thickness + '" stroke="' + circColor +
+                '" fill="none" id="circ" /><use xlink:href="#circ" /><use xlink:href="#circ"' +
+                ' transform="translate(' + spacing + ')"/><use xlink:href="#circ" ' +
+                'transform="translate(-' + spacing + ')"/><use xlink:href="#circ" ' +
+                'transform="translate(0 ' + spacing + ')"/><use xlink:href="#circ" ' +
+                'transform="translate(0 -' + spacing + ')"/></pattern></defs>' +
+                '<rect width="100%" height="100%" fill="url(#chainedcircles)" /></svg>';
+        var encodedData = window.btoa(svgString);
+        var url = 'data:image/svg+xml;base64,' + encodedData;
+        document.body.style.backgroundImage = "url(" + url + ")";
+    }
+    svg();
+    var patternMaker = document.getElementById("patterncontrols");
+    var codeOutput = document.querySelector("output code span");
+    patternMaker.addEventListener("input", function(e) {
+        svg();
+    })
+</script>
+</body>
+</html>
