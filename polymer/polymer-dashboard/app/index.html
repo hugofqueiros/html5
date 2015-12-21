@@ -46,6 +46,8 @@
   <!-- For shared styles, shared-styles.html import in elements.html -->
   <style is="custom-style" include="shared-styles"></style>
 </head>
+<!-- unresolved attribute is used to prevent a flash of unstyled content (FOUC) on browsers
+ that lack native support for custom elements -->
 <body unresolved class="fullbleed layout vertical">
 <span id="browser-sync-binding"></span>
 <template is="dom-bind" id="app">
