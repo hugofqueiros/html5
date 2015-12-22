@@ -1,0 +1,14 @@
+# humanstxt.org/
+# The humans responsible
+
+# TEAM
+Hugo Queiros -- Frontend
+
+# THANKS
+Name: Hugo Dias
+
+# Site
+Last update: YYYY/MM/DD
+Standards: HTML5, CSS3,..
+Components: Gulp, Backbone, jQuery, Modernizr
+Software: npm
