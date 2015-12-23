@@ -57,8 +57,7 @@ gulp.task('default', ['setWatch', 'build'], function () {
 
 	bsync({
 		// Enable source maps
-		baseDir: 'build',
-		debug: true,
+		//debug: true,
 		notify: true,
 		logPrefix: 'Dashboard',
 		files: {
@@ -80,16 +79,16 @@ gulp.task('default', ['setWatch', 'build'], function () {
 		// Log connections
 		logConnections: true,
 		// Log information about changed files
-		logFileChanges: true,
+		//logFileChanges: true,
 		// Don't ever log the snippet
-		logSnippet: true,
-		online: true,
+		//logSnippet: true,
+		//online: true,
 		reloadOnRestart: true,
 		//injectFileTypes: ['less'],
 		injectChanges: true,
 		server: {
-			baseDir: 'build',
-			middleware: [require('connect-logger')(),
+			baseDir:    'build',
+			middleware: [require('connect-logger')()/*,
 				require('connect-history-api-fallback')(),
 				function (req, res, next) {
 					var ext = path.extname(req.url);
@@ -98,10 +97,10 @@ gulp.task('default', ['setWatch', 'build'], function () {
 					} else {
 						next();
 					}
-				}]
+				}*/]
 		},
 		port: 3000,
-		open: false
+		open: true
 	});
 
 	/*    var htmlInjector = require('bs-html-injector');
@@ -280,4 +279,87 @@ gulp.task('scripts-vendor', function () {
 		.pipe(p.size({title: 'JS vendor'}));
 });
 
+gulp.task('template', function (cb) {
+	var t = require('gulp-template');
+	var lastCommit;
 
+	exec('git rev-parse --short=10 HEAD', function (err, stdout, stderr) {
+		lastCommit = stdout.trim();
+		gutil.log('Version: ', appData.version);
+		gutil.log('Commit hash: ', lastCommit);
+		gutil.log('Commit hash:', appData.commit)
+		gutil.log('Date: ', appData.date);
+		gutil.log('Env: ', appData.env);
+		if (err) {
+			cb(err);
+		} else {
+			gulp.src('app/scripts/config/version.json')
+					.pipe(t({
+						version: appData.version,
+						hash: lastCommit,
+						date: appData.date,
+						env: appData.env
+					}))
+					.pipe(gulp.dest('build'));
+			cb();
+		}
+	});
+});
+
+// ######################## Distribution #####################################
+gulp.task('dist', ['clean-build'], function (cb) {
+	checkDeps(env);
+	sequence(
+			'less',
+			'images',
+			'svgs',
+			'fonts',
+			'copy-locales',
+			'scripts',
+			'copy:dist',
+			'concat:dist',
+			'template',
+			function () {
+				del(['build/scripts/vendor.*', 'build/scripts/app.*']).then(function (paths) {
+					gutil.log('Deleted files/folders:\n', '\t\t\t' + gutil.colors.red(paths.join('\n')));
+				}, cb);
+			});
+});
+
+gulp.task('copy:dist', function () {
+	var html = gulp.src('app/*.html')
+			.pipe(p.useref({ searchPath: 'build' }))
+			.pipe(gulp.dest('build'))
+			.pipe(p.size({title: 'HTML        '}));
+
+	var copy = gulp.src(['app/*.{ico,txt}'], {dot: true})
+			.pipe(gulp.dest('build'))
+			.pipe(p.size({title: 'Copy ICO TXT       '}));
+
+	//var css = gulp.src(['build/styles/style.*'])
+	var css = gulp.src(['build/styles/style.*', '!build/styles/style.css.map'])
+			.pipe(p.size({title: 'CSS minified', showFiles: true}))
+			.pipe(p.zopfli()) // gzip
+			.pipe(gulp.dest('build/styles/'))
+			.pipe(p.size({title: 'CSS gziped  ', showFiles: true}));
+
+	return merge(html, copy, css);
+});
+
+gulp.task('concat:dist', function () {
+	var stream = gulp.src(['build/scripts/vendor.js', 'build/scripts/app.js'])
+			.on('error', handleError)
+
+			//.pipe(p.sourcemaps.init({loadMaps: false}))
+			.pipe(p.concat('script.js'))
+			.pipe(p.size({title: 'JS         ', showFiles: true}))
+			.pipe(p.uglify())
+
+			//.pipe(p.sourcemaps.write('.', {includeContent: false, sourceRoot: '.'}))
+			.pipe(p.size({title: 'JS minified', showFiles: true}))
+			.pipe(gulp.dest('build/scripts'))
+			.pipe(p.zopfli())
+			.pipe(gulp.dest('build/scripts'))
+			.pipe(p.size({title: 'JS gziped  ', showFiles: true}));
+	return stream;
+});
