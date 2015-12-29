@@ -8,6 +8,7 @@ var Config = require('../config/config');
 var _ = require('lodash');
 var App = require('app');
 var Sidebar = require('../components/sidebar/sidebar');
+var PanelHeader = require('../components/panel-header/panel-header');
 
 module.exports = Marionette.LayoutView.extend({
 	initialize: function() {
@@ -23,19 +24,23 @@ module.exports = Marionette.LayoutView.extend({
 	template: require('./layout.tpl'),
 
 	regions: {
-		sidebar: '#sidebar',
-		content: '#content'
+		sidebar: '.sidebar',
+		panel: '.panel-main',
+		panelHeader: '.panel-header',
+		content: '.content'
 	},
 
 	ui: {
-		sidebar: '#sidebar',
-		content: '#content'
+		sidebar: '.sidebar',
+		panel: '.panel-main',
+		panelHeader: '.panel-header',
+		content: '.content'
 	},
 
 	onRender: function() {
 		//this.sidebar = new Sidebar();
 		this.sidebar.show(new Sidebar());
-		console.log('Render');
+		this.panelHeader.show(new PanelHeader());
 	},
 
 	onShow: function() {

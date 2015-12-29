@@ -19,7 +19,7 @@ function Router() {
 	this.blacklist = ['/test'];
 
 	App.route('*', this.all.bind(this));
-	App.route('/', this.root.bind(this));
+	//App.route('/', this.root.bind(this));
 }
 
 module.exports = Router;

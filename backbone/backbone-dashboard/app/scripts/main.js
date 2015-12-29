@@ -14,6 +14,7 @@ console.timeEnd('Startup Loading');
 console.time('Startup Routing');
 
 require('./app/router')();
+require('./modules/router')();
 
 // Routing
 App.router.base(App.config.root);

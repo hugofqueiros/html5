@@ -88,8 +88,8 @@ gulp.task('default', ['setWatch', 'build'], function () {
 		injectChanges: true,
 		server: {
 			baseDir:    'build',
-			middleware: [require('connect-logger')()/*,
-				require('connect-history-api-fallback')(),
+			middleware: [require('connect-logger')(),
+				// require('connect-history-api-fallback')(),
 				function (req, res, next) {
 					var ext = path.extname(req.url);
 					if ((ext === '' || ext === '.html') && req.url !== '/') {
@@ -97,7 +97,7 @@ gulp.task('default', ['setWatch', 'build'], function () {
 					} else {
 						next();
 					}
-				}*/]
+				}]
 		},
 		port: 3000,
 		open: true
@@ -316,7 +316,7 @@ gulp.task('dist', ['clean-build'], function (cb) {
 			'images',
 			'svgs',
 			'fonts',
-			'copy-locales',
+			'locales',
 			'scripts',
 			'copy:dist',
 			'concat:dist',

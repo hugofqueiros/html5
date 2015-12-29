@@ -1,0 +1,107 @@
+@import "../vars/layout-vars";
+@import "../vars/colors";
+
+/**
+* Sidebar Main Container
+**/
+.sidebar {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: @sidebar-width;
+  height: 100%;
+  overflow: hidden;
+  transition: opacity ease-in 0.2s;
+  border-right: 1px solid @border-color;
+  background-color: @sidebar-color;
+}
+
+/**
+* Sidebar Header
+**/
+.sidebar-header {
+  padding: 8px 20px;
+  height: @sidebar-header-height;
+  border-bottom: 1px solid @border-color;
+  pointer-events: none;
+}
+
+.sidebar-profile {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.sidebar-header >.sidebar-profile img {
+  flex: none;
+}
+
+.sidebar-header >.sidebar-profile span {
+  flex: none;
+  margin-left: 10px;
+  max-width: 157px;
+  font-size: 12px;
+  opacity: 0.54;
+  font-weight: bold;
+  // font-family: "Roboto";
+}
+
+/**
+* Sidebar Container
+**/
+.sidebar-container {
+  display: block;
+  position: absolute;
+  top: @sidebar-content-top;
+  padding: 8px 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.sidebar-container-item:active {
+  color: green;
+}
+
+.sidebar-container-item:hover {
+  background: red;
+}
+
+.sidebar-container a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  line-height: 24px;
+  min-height: 48px;
+  padding: 0 16px;
+  text-decoration: none;
+  color: #111111;
+  text-rendering: optimizeLegibility;
+  font-size: 14px;
+  //font-weight: bold;
+}
+
+.sidebar-container a > span {
+  pointer-events: none;
+  opacity: 0.54;
+}
+
+.sidebar-container-item-icon {
+  margin-right: 33px;
+  opacity: 0.54;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  vertical-align: middle;
+}
+
+.sidebar-container-item-icon > i {
+  font-size: 24px;
+}
+

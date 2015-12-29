@@ -20,8 +20,6 @@ App.addRegions({
 });
 
 App.addInitializer(function() {
-
-	console.log('came to initializer');
 	var Layout = require('./../layout/layout');
 	App.layout = new Layout();
 	App.getRegion('body').show(App.layout);
