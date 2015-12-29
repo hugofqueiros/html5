@@ -3,11 +3,44 @@
  */
 'use strict';
 
-var Backbone = require('backbone');
+var Marionette = require('backbone.marionette');
+var App = module.exports = new Marionette.Application();
+var Config = require('../config/config');
+var Router = require('page');
+var State = require('./state');
 
-module.exports = Backbone.Model.extend({
-	defaults: {
-		isLoading: false,
-		config: {}
-	}
+App.config = Config;
+App.state = new State();
+App.router = Router;
+
+console.debug('Debug Env: ', Config.debug);
+
+App.addRegions({
+	body: '#app'
 });
+
+App.addInitializer(function() {
+
+	console.log('came to initializer');
+	var Layout = require('./../layout/layout');
+	App.layout = new Layout();
+	App.getRegion('body').show(App.layout);
+});
+
+App.go = function(path) {
+	console.debug('Go: ', path);
+	if ('string' === typeof path) {
+		Router.apply(Router, arguments);
+	}
+};
+
+App.route = function(path, fn) {
+	if('function' === typeof fn) {
+		console.debug('ROUTE: ', path, fn);
+		Router.apply(Router, arguments);
+	}
+};
+
+App.showContent = function(view) {
+	App.layout.content.show(view);
+};

@@ -1,0 +1,46 @@
+/**
+* LAYOUT
+**/
+
+//Flex Layout
+.container.horizontal,
+.container.vertical,
+.layout.horizontal
+.layout.vertical,
+.layout.horizontal-reverse,
+.layout.vertical-reverse {
+  display: flex;
+}
+
+// Makes the flex container display inline
+.layout.inline,
+.container.inline {
+  display: inline-flex;
+}
+
+.layout.horizontal {
+  flex-direction: row;
+}
+
+.layout.vertical {
+  flex-direction: column;
+}
+
+.layout.vertical-reverse {
+  flex-direction: column-reverse;
+}
+
+.layout.horizontal-reverse {
+  flex-direction: row-reverse;
+}
+
+.flex-auto {
+  flex: none;
+}
+
+@import "app-container";
+@import "sidebar";
+@import "main-content";
+
+
+

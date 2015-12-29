@@ -158,7 +158,9 @@ gulp.task('images', function () {
 gulp.task('fonts', function () {
 	bsync.notify('Compiling fonts... Please Wait');
 
-	return fontsTask(['app/fonts/**', 'node_modules/font-awesome/fonts/**'],
+	return fontsTask(['app/fonts/**',
+		'node_modules/font-awesome/fonts/**',
+		'node_modules/bootstrap/fonts/**'],
 		'build/fonts',
 		reload,
 		optimize);

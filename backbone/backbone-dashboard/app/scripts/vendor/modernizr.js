@@ -25,7 +25,7 @@
 ;(function(window, document, undefined){
 	var classes = [];
 
-	;
+/*	;
 	define("test/css/vminunit", function(){});
 
 	;
@@ -314,7 +314,7 @@
 	define("test/webgl/extensions", function(){});
 
 	;
-	define("test/window/atob-btoa", function(){});
+	define("test/window/atob-btoa", function(){});*/
 
 
 	var tests = [];
