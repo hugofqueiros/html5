@@ -26,10 +26,89 @@
 
     <meta name="theme-color" content="#f5f5f5">
 
+    <style>
+        .startup {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            background-color: #eeeeee;
+
+            -moz-user-select: none;
+            -webkit-user-select: none;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            display: -webkit-box;
+            display: -webkit-flex;
+            -webkit-align-items: center;
+            -webkit-justify-content: center;
+        }
+
+        .spinner-container {
+            -webkit-animation: rotate 2s linear infinite;
+            animation: rotate 2s linear infinite;
+            z-index: 2;
+        }
+
+        .spinner-container .path {
+            stroke-dasharray: 1,150;
+            stroke-dashoffset: 0;
+            stroke: rgba(63, 81, 181, 0.7);
+            stroke-linecap: round;
+            -webkit-animation: dash 1.5s ease-in-out infinite;
+            animation: dash 1.5s ease-in-out infinite;
+        }
+
+        @keyframes rotate {
+            100% { transform: rotate(360deg); }
+        }
+        @-webkit-keyframes rotate{
+            100% { -webkit-transform: rotate(360deg); }
+        }
+
+        @keyframes dash {
+            0% {
+                stroke-dasharray: 1,150;
+                stroke-dashoffset: 0;
+            }
+            50% {
+                stroke-dasharray: 90,150;
+                stroke-dashoffset: -35;
+            }
+            100% {
+                stroke-dasharray: 90,150;
+                stroke-dashoffset: -124;
+            }
+        }
+        @-webkit-keyframes dash {
+            0% {
+                stroke-dasharray: 1,150;
+                stroke-dashoffset: 0;
+            }
+            50% {
+                stroke-dasharray: 90,150;
+                stroke-dashoffset: -35;
+            }
+            100% {
+                stroke-dasharray: 90,150;
+                stroke-dashoffset: -124;
+            }
+        }
+    </style>
+
     <link rel="stylesheet" href="/styles/style.css"/>
 </head>
 <body class="layout vertical">
-    <div id="app"></div>
+    <div id="app">
+        <div class="startup">
+            <svg class="spinner-container" style="width:65px;height:65px;"
+                 viewBox="0 0 44 44" data-reactid=".0.0.0">
+                <circle class="path" cx="22" cy="22" r="20" fill="none" stroke-width="4" data-reactid=".0.0.0.0">
+                </circle>
+            </svg>
+        </div>
+    </div>
 
     <!-- build:js /scripts/script.js -->
     <script src="/scripts/vendor.js"></script>

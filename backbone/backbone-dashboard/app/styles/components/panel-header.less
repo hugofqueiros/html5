@@ -6,4 +6,47 @@
   height: @panel-header-height;
   border-bottom: 1px solid @border-color;
   background: #3F51B5;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.panel-header-menu {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  position: relative;
+  vertical-align: middle;
+  flex: none;
+  border-radius: 50%;
+  cursor: pointer;
+  visibility: visible;
+  transition: background-color 0.2s ease, visibility 0.2s ease-in;
+}
+
+.panel-header-menu > i {
+  color: white;
+  //opacity: 0.5;
+  //border: 0;
+  background-color: transparent;
+  font-size: 18px;
+}
+
+.panel-header-menu > button:active {
+  //background-color: rgba(0, 0, 0, 0.1);
+}
+
+.panel-header-menu:hover,
+.panel-header-menu:active {
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (min-width: 768px) {
+  .panel-header-menu {
+    //display: none;
+    visibility: collapse;
+  }
 }

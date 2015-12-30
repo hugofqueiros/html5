@@ -5,11 +5,12 @@
 * Sidebar Main Container
 **/
 .sidebar {
-  display: block;
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
   width: @sidebar-width;
+  //width: @layout-sidebar-width;
   height: 100%;
   overflow: hidden;
   transition: opacity ease-in 0.2s;
@@ -21,7 +22,7 @@
 * Sidebar Header
 **/
 .sidebar-header {
-  padding: 8px 20px;
+  padding: 8px 16px;
   height: @sidebar-header-height;
   border-bottom: 1px solid @border-color;
   pointer-events: none;
@@ -105,3 +106,8 @@
   font-size: 24px;
 }
 
+@media only screen and (min-width: 768px) {
+  .sidebar {
+    display: block;
+  }
+}

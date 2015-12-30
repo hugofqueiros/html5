@@ -2,12 +2,23 @@
 
 .panel-main {
   display: block;
+  //display: flex;
   position: absolute;
   top: 0;
   // flex: 1;
-  left: @layout-left-width;
+  left: 0;
   width: 100%;
+  //width: @layout-panel-width;
   height: 100%;
   overflow: hidden;
-  transition: opacity ease-in 0.2s;
+  //transition: opacity ease-in 0.2s;
+  transition: left ease-in 0.2s;
 }
+
+@media only screen and (min-width: 768px) {
+  .panel-main {
+    left: @layout-left-width;
+  }
+}
+
+

@@ -107,6 +107,7 @@
     "watchify": "~3.6.1"
   },
   "dependencies": {
+    "animate": "daneden/animate.css",
     "backbone": "~1.2.2",
     "backbone.marionette": "~2.4.2",
     "bluebird": "~3.1.1",
