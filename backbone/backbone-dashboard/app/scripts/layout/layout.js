@@ -27,14 +27,14 @@ module.exports = Marionette.LayoutView.extend({
 		sidebar: '.sidebar',
 		panel: '.panel-main',
 		panelHeader: '.panel-header',
-		content: '.content'
+		content: '.panel-content'
 	},
 
 	ui: {
 		sidebar: '.sidebar',
 		panel: '.panel-main',
 		panelHeader: '.panel-header',
-		content: '.content'
+		content: '.panel-content'
 	},
 
 	onRender: function() {

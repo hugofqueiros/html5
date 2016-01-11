@@ -4,6 +4,7 @@
 'use strict';
 
 var Marionette = require('backbone.marionette');
+var Card = require('../../components/cards/card');
 
 module.exports = Marionette.LayoutView.extend({
 	initialize: function() {
@@ -13,7 +14,7 @@ module.exports = Marionette.LayoutView.extend({
 	template: require('./home.tpl'),
 
 	regions: {
-
+		card1: '#card1'
 	},
 
 	serializeData: function() {
@@ -23,6 +24,8 @@ module.exports = Marionette.LayoutView.extend({
 	},
 
 	onShow: function() {
+		this.card1.show(new Card({
 
+		}));
 	}
 });
