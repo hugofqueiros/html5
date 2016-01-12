@@ -1,5 +1,3 @@
-
-
 ## See your site responsive
 [ami.responsivedesign.is](http://ami.responsivedesign.is/)
 [am-i-responsive github](https://github.com/justincavery/am-i-responsive)

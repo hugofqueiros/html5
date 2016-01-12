@@ -11,3 +11,13 @@ The splash screen is generated dynamically from information held in the Web App 
 ## Getting started with Progressive Web apps
 [Progressive Web Apps](https://addyosmani.com/blog/getting-started-with-progressive-web-apps/)
 
+## Service workers
+service workers ready? - https://jakearchibald.github.io/isserviceworkerready/resources.html
+http://www.html5rocks.com/en/tutorials/service-worker/introduction/
+
+example: https://github.com/nolanlawson/pokedex.org/blob/master/src/js/serviceWorker/index.js
+
+### push notification:
+https://github.com/1000ch/service-worker-push-notification
+https://github.com/gauntface/simple-push-demo
+https://github.com/GoogleChrome/push-notifications
