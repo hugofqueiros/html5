@@ -1,8 +1,8 @@
-## See your site responsive
 
+
+## See your site responsive
 [ami.responsivedesign.is](http://ami.responsivedesign.is/)
 [am-i-responsive github](https://github.com/justincavery/am-i-responsive)
-
 
 ## Colors
 [Material Design Colors](http://www.designskilz.com/colors/)
@@ -16,3 +16,8 @@ Create responsive e-mails: [zurb.com](http://foundation.zurb.com/emails.html)
 Easy markdown responsive e-mails: [cakedown.alexandredeschamps.ca](http://cakedown.alexandredeschamps.ca/)
 Build test and see responsive emails: [litmus.com](https://litmus.com/)
 
+## Feature Detection
+[featurejs](http://featurejs.com/)
+
+## Translations
+https://www.transifex.com/
