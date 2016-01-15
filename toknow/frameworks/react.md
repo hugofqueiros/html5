@@ -27,3 +27,8 @@ autobind-decorator: A class or method decorator which binds methods to the insta
      return this.value
    }
  ```
+ 
+## Radium lib
+Tool to write React component styles inline
+
+http://stack.formidable.com/radium/
