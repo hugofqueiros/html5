@@ -1,0 +1,1 @@
+http://survivejs.com/webpack_react/webpack_compared/
