@@ -10,6 +10,8 @@ var config = {
 	commit: '@@@commit',
 	debug: '@@@debug',
 
+	locale: (window.navigator.language || window.navigator.browserLanguage).split('-')[0],
+	mapsUrl: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCFnmJL_3MvyPry_KzHkRgHeMzUP4sk9_s&callback=onLoadGoogleApiCallback&sensor=false&language=en-US',
 	root: ''
 };
 

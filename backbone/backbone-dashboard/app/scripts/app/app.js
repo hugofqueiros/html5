@@ -8,10 +8,12 @@ var App = module.exports = new Marionette.Application();
 var Config = require('../config/config');
 var Router = require('page');
 var State = require('./state');
+var Intl = require('../utils/intl');
 
 App.config = Config;
 App.state = new State();
 App.router = Router;
+App.Intl = new Intl();
 
 console.debug('Debug Env: ', Config.debug);
 

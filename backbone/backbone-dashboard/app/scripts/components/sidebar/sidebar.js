@@ -18,14 +18,17 @@ module.exports = Marionette.ItemView.extend({
 	},
 
 	ui: {
-		sidebarContainer: '.sidebar-container'
+		sidebarContainer: '.sidebar-container',
+		sidebarContainerListItems: '.sidebar-container-list-items'
 	},
 
 	events: {
 		'click @ui.sidebarContainer': function(e) {
 			console.log('clicks', e, e.target, e.target.classList.add('active'));
-			e.preventDefault();
-			e.stopPropagation();
+
+			console.log('list', this.ui.sidebarContainerListItems);
+			//e.preventDefault();
+			//e.stopPropagation();
 
 			e.target.classList.add('active');
 		}

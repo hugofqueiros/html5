@@ -29,4 +29,13 @@ window.addEventListener('unhandledrejection', function (e) {
 require('bootstrap');
 require('modernizr');
 
+var highcharts = require('highcharts');
+window.Highcharts = highcharts;
+
+require('highcharts-data');
+require('highcharts-no-data');
+require('highcharts-boost');
+require('highcharts-exporting');
+Highcharts.setOptions(require('../config/highcharts-config'));
+
 console.timeEnd('Startup Globals');
