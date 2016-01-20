@@ -18,7 +18,7 @@ export class Users {
   }
 
   activate() {
-    return this.http.fetch('users')
+    return this.http.fetch('/repos/lsts/neptus/contributors')
       .then(response => response.json())
       .then(users => this.users = users);
   }
