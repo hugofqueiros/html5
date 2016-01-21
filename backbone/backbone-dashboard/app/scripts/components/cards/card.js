@@ -6,6 +6,7 @@
 var Marionette = require('backbone.marionette');
 var cardTypes = require('./card-options').cardTypes;
 var chartTypes = require('./card-options').chartTypes;
+var chartTypesOptions = require('./card-options').chartTypesOptions;
 var _ = require('lodash');
 var Intl = require('app').Intl;
 
@@ -48,10 +49,8 @@ module.exports = Marionette.ItemView.extend({
 	},
 
 	onShow: function() {
-		console.log('cenas', this.cardType, cardTypes.chart);
 		if (this.cardType === cardTypes.chart) {
-			console.log('coco');
-			var options = _.merge(this[this.chartType + 'Options'](), {
+			var options = _.merge(chartTypesOptions[this.chartType + 'Options'](this.series), {
 				chart: {
 					renderTo: this.ui.chart[0]
 				}
@@ -61,84 +60,6 @@ module.exports = Marionette.ItemView.extend({
 				this.chart = new Highcharts.Chart(options);
 				this.chart.reflow();
 			}.bind(this), 0);
-		}
-	},
-
-	lineOptions: function () {
-		console.log('line');
-		return {
-			chart: {
-				type: 'line'
-			},
-			tooltip: {
-				shared: true
-			},
-			xAxis: {
-				type: 'datetime',
-				tickInterval: 30.41667 * 24 * 3600 * 1000,
-				title: {
-					text: null
-				},
-				lineColor: '#E4ECF2',
-				tickColor: '#E4ECF2',
-				labels: {
-					style: {
-						fontSize: '10px'
-					}
-					//y:     25
-				},
-				dateTimeLabelFormats: {
-					//month: '%b \'%y'
-					//month: '%e. %b',
-					//year: '%b'
-					millisecond: '%H:%M:%S.%L',
-					second: '%H:%M:%S',
-					minute: '%H:%M',
-					hour: '%H h',//:%M',
-					day: '%a %e',
-					week: '%e %b.',
-					month: '%b \'%y',
-					year: '%Y'
-				}
-			},
-			series: this.series
-		}
-	},
-
-	areaSplineOptions: function () {
-		return {
-			chart: {
-				type: 'areaspline'
-			},
-			xAxis: {
-				type: 'datetime',
-				tickInterval: 30.41667 * 24 * 3600 * 1000,
-				title: {
-					text: null
-				},
-				lineColor: '#E4ECF2',
-				tickColor: '#E4ECF2',
-				labels: {
-					style: {
-						fontSize: '10px'
-					}
-					//y:     25
-				},
-				dateTimeLabelFormats: {
-					//month: '%b \'%y'
-					//month: '%e. %b',
-					//year: '%b'
-					millisecond: '%H:%M:%S.%L',
-					second: '%H:%M:%S',
-					minute: '%H:%M',
-					hour: '%H h',//:%M',
-					day: '%a %e',
-					week: '%e %b.',
-					month: '%b \'%y',
-					year: '%Y'
-				}
-			},
-			series: this.series
 		}
 	}
 });

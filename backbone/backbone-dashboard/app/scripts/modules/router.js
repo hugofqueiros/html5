@@ -32,10 +32,13 @@ Router.prototype.home = function() {
 Router.prototype.overview = function() {
 	console.debug('Overview Route');
 
-	var Section = require('./overview/overview');
+	var Section = require('./overview/views/overview');
+	var Model = require('./overview/models/overview');
+
+	var model = new Model();
 
 	App.showContent(new Section({
-
+		model: model
 	}));
 };
 

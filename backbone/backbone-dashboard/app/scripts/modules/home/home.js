@@ -5,6 +5,7 @@
 
 var Marionette = require('backbone.marionette');
 var Card = require('../../components/cards/card');
+var cardOptions = require('../../components/cards/card-options');
 var _ = require('lodash');
 var m = require('moment');
 
@@ -56,7 +57,7 @@ module.exports = Marionette.LayoutView.extend({
 
 		this.homeChart.show(new Card({
 			cardType: 'chart',
-			chartType: 'line',
+			chartType: cardOptions.chartTypes.line,
 			title: 'Chart',
 			series: [
 				{
@@ -119,7 +120,7 @@ module.exports = Marionette.LayoutView.extend({
 
 		this.visitsChart.show(new Card({
 			cardType: 'chart',
-			chartType: 'areaSpline',
+			chartType: cardOptions.chartTypes.areaSpline,
 			title: 'Visits Chart',
 			series: [{
 				name: 'visits',
@@ -139,7 +140,7 @@ module.exports = Marionette.LayoutView.extend({
 
 		this.pageviewsChart.show(new Card({
 			cardType: 'chart',
-			chartType: 'areaSpline',
+			chartType: cardOptions.chartTypes.areaSpline,
 			title: 'Page Views Chart',
 			series: [{
 				name: 'page views',
