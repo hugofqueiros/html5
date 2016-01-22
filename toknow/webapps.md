@@ -12,6 +12,8 @@ The splash screen is generated dynamically from information held in the Web App 
 [Progressive Web Apps](https://addyosmani.com/blog/getting-started-with-progressive-web-apps/)
 
 ## Service workers
+UpUp lib - https://github.com/TalAter/UpUp/
+
 service workers ready? - https://jakearchibald.github.io/isserviceworkerready/resources.html
 http://www.html5rocks.com/en/tutorials/service-worker/introduction/
 

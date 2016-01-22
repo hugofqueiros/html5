@@ -3,6 +3,9 @@
 ## Awesome React
 https://github.com/enaqx/awesome-react
 
+## Best Practices
+https://blog.risingstack.com/react-js-best-practices-for-2016/
+
 ## React with babel cheatsheet
 http://jamesknelson.com/wp-content/uploads/2016/01/react-with-babel-cheatsheet.pdf
 
@@ -35,3 +38,9 @@ autobind-decorator: A class or method decorator which binds methods to the insta
 Tool to write React component styles inline
 
 http://stack.formidable.com/radium/
+
+## Testing
+[enzyme] - airbnb testing tool - https://github.com/airbnb/enzyme
+
+## Pusher - reactjs with websockets
+https://blog.pusher.com/making-reactjs-realtime-with-websockets/
