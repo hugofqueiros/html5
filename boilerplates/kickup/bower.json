@@ -1,0 +1,32 @@
+{
+  "name": "kickup",
+  "description": "Boilerplate for your perfect front-end environment (utilizing Gulp.js, Babel, and more)",
+  "main": "gulpfile.babel.js",
+  "authors": [
+    "Hugo Queiros <hugofqueiros@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/hugofqueiros/html5",
+  "moduleType": [
+    "es6",
+    "node"
+  ],
+  "keywords": [
+    "boilerplate",
+    "preset",
+    "gulp",
+    "es6",
+    "gulpjs"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha",
+    "normalize-strings": "normalize#~1.0.4"
+  }
+}
