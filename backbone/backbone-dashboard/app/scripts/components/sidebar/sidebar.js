@@ -8,7 +8,9 @@ var _ = require('lodash');
 
 module.exports = Marionette.ItemView.extend({
 	initialize: function() {
-
+		this.listenTo(App.state, 'change:route', function (value) {
+			console.log('change route', value);
+		});
 	},
 
 	template: require('./sidebar.tpl'),

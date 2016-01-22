@@ -5,6 +5,7 @@
 
 var Backbone = require('backbone');
 var moment = require('moment');
+var _ = require('lodash');
 
 module.exports = Backbone.Model.extend({
 	defaults: {
@@ -12,11 +13,9 @@ module.exports = Backbone.Model.extend({
 	},
 
 	initialize: function() {
-		console.log('model');
-
 		setInterval(function() {
-			var time = moment.utc().valueOf(); // current time
-			var visits = Math.random(10, 100);
+			var time = moment.utc().format('MMM Do YYYY, h:mm:ss'); // current time
+			var visits = _.random(10, 100);
 			this.set('visits', [visits, time]);
 		}.bind(this), 1000)
 	}
