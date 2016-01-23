@@ -5,6 +5,7 @@
 
 var Marionette = require('backbone.marionette');
 var _ = require('lodash');
+var App = require('app');
 
 module.exports = Marionette.ItemView.extend({
 	initialize: function() {

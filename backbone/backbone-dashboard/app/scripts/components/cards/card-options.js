@@ -14,7 +14,6 @@ var opts = {
 	},
 	chartTypesOptions: {
 		lineOptions: function (series) {
-			console.log('line');
 			return {
 				chart: {
 					type: 'line'
