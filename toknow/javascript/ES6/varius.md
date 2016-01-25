@@ -12,3 +12,6 @@ https://ponyfoo.com/articles/asynchronous-i-o-with-generators-and-promises?utm_s
 
 ## Guidelines
 https://ada.is/blog/2015/07/13/immutable/
+
+## ES6 cheat sheet
+https://github.com/DrkSephy/es6-cheatsheet

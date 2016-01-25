@@ -15,3 +15,13 @@ https://github.com/Aerolab/midnight.js
 ## Sharer.js 
 Create custom social share elements on DOM objects
 https://ellisonleao.github.io/sharer.js/
+
+## Timeline
+https://github.com/andriussev/timelined
+
+## Favico.js
+Make use of your favicon with badges, images or videos
+http://lab.ejci.net/favico.js/#
+
+## edX UX Pattern Lib
+https://github.com/edx/ux-pattern-library
