@@ -48,28 +48,11 @@ module.exports = Marionette.LayoutView.extend({
 			//this.render();
 		}.bind(this));
 
-		this.series = [{
-			name: 'visits',
-			data: [[m('2014-11-01T00:00:00.000Z').utc().valueOf(), 4],
-				[m('2014-12-01T00:00:00.000Z').utc().valueOf(), 5],
-				[m('2015-01-01T00:00:00.000Z').utc().valueOf(), 20],
-				[m('2015-02-01T00:00:00.000Z').utc().valueOf(), 30],
-				[m('2015-03-01T00:00:00.000Z').utc().valueOf(), 60],
-				[m('2015-04-01T00:00:00.000Z').utc().valueOf(), 70],
-				[m('2015-05-01T00:00:00.000Z').utc().valueOf(), 100],
-				[m('2015-06-01T00:00:00.000Z').utc().valueOf(), 210],
-				[m('2015-07-01T00:00:00.000Z').utc().valueOf(), 400],
-				[m('2015-08-01T00:00:00.000Z').utc().valueOf(), 500],
-				[m('2015-09-01T00:00:00.000Z').utc().valueOf(), 746]]
-		}];
-
 		var _this = this;
-
 		var series = [{
 			name: 'visits',
 			data: [[m().utc().valueOf(), 0]]
 		}];
-
 		var options = _.merge(chartTypesOptions[chartTypes.line + 'Options'](series), {
 			chart: {
 				renderTo: this.ui.chart[0],
