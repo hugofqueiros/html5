@@ -12,6 +12,9 @@ catch (e) {
   polyfillsNeeded.push('/js/polyfills/url.js');
 }
 
+/**
+ * most work is in IndexController
+ */
 loadScripts(polyfillsNeeded, function() {
   new IndexController(document.querySelector('.main'));
 });

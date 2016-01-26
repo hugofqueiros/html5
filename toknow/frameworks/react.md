@@ -1,5 +1,10 @@
 # React
 
+## React getting started and concepts
+https://scotch.io/tutorials/learning-react-getting-started-and-concepts
+
+https://camjackson.net/post/9-things-every-reactjs-beginner-should-know
+
 ## Awesome React
 https://github.com/enaqx/awesome-react
 
