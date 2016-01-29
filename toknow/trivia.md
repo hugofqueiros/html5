@@ -1,6 +1,12 @@
 # Trivia
  
-Things nice to know
+Nice things to know
+
+## The elements of HTML
+http://w3c.github.io/elements-of-html/
+
+## Front-end application Libs and Component
+http://developer.telerik.com/featured/front-end-application-frameworks-component-architectures/
 
 ## event listeners
 More heavy on memory, bad for mobile. They have multicore but they don-t have a lot of memory
@@ -17,3 +23,4 @@ https://blog.mariusschulz.com/2015/12/31/constant-variables-in-javascript-or-whe
 
 ### Critical CSS
 https://www.smashingmagazine.com/2015/08/understanding-critical-css/
+

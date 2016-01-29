@@ -6,3 +6,7 @@ https://medium.com/@larsenwork/optimising-svgs-for-web-use-part-2-1-598815d74f9c
 ## SVG compendium
 https://css-tricks.com/mega-list-svg-information/
 
+## Libs vector icons
+http://ipestov.com/best-free-vector-icon-sets-for-all-of-your-needs/
+http://tympanus.net/codrops/2016/01/29/freebie-science-line-icons/
+

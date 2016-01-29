@@ -15,3 +15,6 @@ https://ada.is/blog/2015/07/13/immutable/
 
 ## ES6 cheat sheet
 https://github.com/DrkSephy/es6-cheatsheet
+
+## Symbols
+http://www.sitepoint.com/preparing-ecmascript-6-symbols-uses/
