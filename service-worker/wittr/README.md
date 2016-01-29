@@ -47,3 +47,15 @@ type sw-waiting
 
 close tab or go to another url
 type sw-active
+
+##
+type: html-response
+
+## to intersept fetchs that end with *.jpg
+type gif-response
+
+## to check cache install
+type install-cached
+
+## do code on fetch event using cache and everything will be working if you are offline
+type cache-served

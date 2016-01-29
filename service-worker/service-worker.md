@@ -48,3 +48,33 @@ must be closed in order to the service worker to be stopped.
 
 11. Fetch manages responses from web
 You could add string 'Hello World' -> it will be replied as plain text
+
+12. Create responses ourselfs without using the network ourselfs, with need somewhere to store the HTML, css, js, images
+cache API
+caches.open('my-stuff').then(function(cache) {
+}
+returns a promise of a cache with that name
+store things from our own origin and from elsewhere (request!response)
+
+cache.put(request, response);
+or use
+cache.addAll([
+    '/foo',
+    '/bar'
+])
+
+this operation is atomic, if any of these fail to cache, none is cached
+
+if we want to get something from the cache use .match(request)
+cache.match(request); -> returns a promise from a matching response
+
+caches.match(resquest); -> does the same but it tryes to find a match in any cache
+
+13. when should we store the cache, in -> event install
+install event fired the first time the browser installs a service worker
+
+	event.waitUntil() -> returns promise
+
+if the install fails the service worker should be discarded
+
+- check cache on dev tools on Resources - Cache Storage
