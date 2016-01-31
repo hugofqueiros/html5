@@ -18,3 +18,7 @@ https://github.com/DrkSephy/es6-cheatsheet
 
 ## Symbols
 http://www.sitepoint.com/preparing-ecmascript-6-symbols-uses/
+
+http://www.jstips.co/en/filtering-and-sorting-a-list-of-strings/?utm_source=javascriptweekly&utm_medium=email
+
+https://github.com/sgaurav/understanding-es6?utm_source=javascriptweekly&utm_medium=email

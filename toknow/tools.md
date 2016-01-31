@@ -23,13 +23,6 @@ http://caniuse.com/
 ## Gradient gen
 http://gradient.quasi.ink/
 
-## Fonts
-[https://www.myfonts.com/](https://www.myfonts.com/)
-[http://fontello.com/](http://fontello.com/)
-
-### test fonts
-http://typewonder.com/
-
 ## Icons
 [http://fontastic.me/](http://fontastic.me/)
 [https://icomoon.io/](https://icomoon.io/)

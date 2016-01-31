@@ -6,3 +6,6 @@ https://github.com/loverajoel/jstips
 
 ## Repo Bennadel - JavaScript Demos
 https://github.com/bennadel/JavaScript-Demos
+
+## 2016 the year of web streams
+https://jakearchibald.com/2016/streams-ftw/
