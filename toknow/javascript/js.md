@@ -9,3 +9,6 @@ https://github.com/bennadel/JavaScript-Demos
 
 ## 2016 the year of web streams
 https://jakearchibald.com/2016/streams-ftw/
+
+## JS modules
+https://medium.freecodecamp.com/javascript-modules-a-beginner-s-guide-783f7d7a5fcc#.narrf1qkv
