@@ -8,11 +8,11 @@ gulp.task('server', () => {
     port: server.port,
     notify: false,
     server: {
-      baseDir: dest,
+      baseDir: dest
     },
     ui: {
-      port: server.port + 1,
-    },
+      port: server.port + 1
+    }
   });
 });
 

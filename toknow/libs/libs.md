@@ -28,3 +28,6 @@ https://github.com/edx/ux-pattern-library
 
 ## Simplest Instagram Api library in Javascript
 https://github.com/zzarcon/nodegram
+
+## Tooltips
+http://kushagragour.in/lab/hint/

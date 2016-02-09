@@ -55,3 +55,7 @@ https://medium.com/infinite-red/what-sucks-about-react-native-c38a307a210f#.nx6c
 
 ## Build a react universal blog app
 http://www.sitepoint.com/building-a-react-universal-blog-app-a-step-by-step-guide/
+
+## Learn how to be productive in React in a Week
+https://css-tricks.com/productive-in-react/
+http://codepen.io/sdras/pen/RrKLqL

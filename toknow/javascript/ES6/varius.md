@@ -22,3 +22,6 @@ http://www.sitepoint.com/preparing-ecmascript-6-symbols-uses/
 http://www.jstips.co/en/filtering-and-sorting-a-list-of-strings/?utm_source=javascriptweekly&utm_medium=email
 
 https://github.com/sgaurav/understanding-es6?utm_source=javascriptweekly&utm_medium=email
+
+## Introduction Proxies
+https://developers.google.com/web/updates/2016/02/es2015-proxies
