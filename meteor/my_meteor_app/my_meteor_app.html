@@ -1,0 +1,35 @@
+<head>
+    <title>My Todo List</title>
+</head>
+
+<body>
+<div class="container">
+    <header>
+        <h1>My Todo List</h1>
+        <p>Built Using Meteor Framework!</p>
+    </header>
+
+    <ul>
+        {{#each tasks}}
+            {{> task}}
+        {{/each}}
+    </ul>
+
+    {{> todo}}
+
+    {{> loginButtons}}
+</div>
+</body>
+
+<template name="task">
+    <li>{{text}}</li>
+</template>
+
+<template name="todo">
+    <ul>
+        {{#each tasks}}
+            <li>{{text}} {{createdAt}}</li>
+        {{/each}}
+    </ul>
+</template>
+
