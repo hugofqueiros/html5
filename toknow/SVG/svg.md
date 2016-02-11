@@ -10,3 +10,8 @@ https://css-tricks.com/mega-list-svg-information/
 http://ipestov.com/best-free-vector-icon-sets-for-all-of-your-needs/
 http://tympanus.net/codrops/2016/01/29/freebie-science-line-icons/
 
+## A glup-based external SVG symbol sprite icon system
+http://una.im/svg-icons
+https://github.com/una/svg-icon-system-boilerplate
+
+[spritesh](http://dev.edenspiekermann.com/2016/02/10/introducing-spritesh/)
