@@ -1,5 +1,8 @@
 # Service Worker
 
+## notes
+https://adactio.com/journal/10186
+
 ## Samples
 https://github.com/GoogleChrome/samples/tree/gh-pages/service-worker
 
