@@ -1,0 +1,48 @@
+<head>
+    <title>Todo List</title>
+</head>
+
+<body>
+<div class="container">
+    <header>
+        <h1>Todo List</h1>
+    </header>
+
+    <ul>
+        {{#each tasks}}
+            {{> task}}
+        {{/each}}
+    </ul>
+
+
+    <header>
+        <h1>Todo List Insert list todo Persist</h1>
+    </header>
+    <ul>
+        {{#each tasksPersist}}
+            {{> taskPers}}
+        {{/each}}
+    </ul>
+
+    <header>
+        <h1>Todo List Form</h1>
+
+        <form class="new-task">
+            <input type="text" name="text" placeholder="Type to add new tasks" />
+        </form>
+    </header>
+</div>
+</body>
+
+<template name="task">
+    <li>{{text}}</li>
+</template>
+
+<template name="taskPers">
+    <li class="{{#if checked}}checked{{/if}}">
+        <button class="delete">&times;</button>
+        <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
+        <span class="text">{{text}}</span>
+    </li>
+</template>
+
