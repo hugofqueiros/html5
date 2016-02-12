@@ -20,3 +20,8 @@ http://premium.wpmudev.org/blog/css-flexbox/
 
 ## Flex playground
 http://codepen.io/enxaneta/full/adLPwv/
+
+## Paralax
+
+### pure paralax websites
+http://keithclark.co.uk/articles/pure-css-parallax-websites/

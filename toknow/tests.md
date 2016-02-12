@@ -8,3 +8,6 @@ https://www.smashingmagazine.com/2016/02/design-mock-ups-need-dynamic-content-to
 
 ## Tape vs Tap
 https://remysharp.com/2016/02/08/testing-tape-vs-tap
+
+## Dealing with Garbage
+http://www.thedotpost.com/2015/12/samuel-saccone-dealing-with-garbage

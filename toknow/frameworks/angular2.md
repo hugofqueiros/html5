@@ -18,3 +18,6 @@ http://plnkr.co/edit/rDq2LUMz0iNdlv54CfUj?p=info
 http://www.bennadel.com/blog/2996-angularjs-2-beta-1-hello-world-with-es5-and-requirejs.htm
 
 http://www.bennadel.com/blog/3016-rendering-large-datasets-with-angular-2-beta-3-and-reactjs-0-14-7.htm
+
+## Rock paper scissors game with angular2
+http://angular-craft.com/building-a-rock-paper-scissors-game-with-angular-2/
