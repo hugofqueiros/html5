@@ -103,3 +103,10 @@ meteor install-sdk ios
 meteor install-sdk android
 ```
 https://github.com/meteor/meteor/wiki/Mobile-Development-Install:-Android-on-Linux
+
+If you want to point your app to the server you deployed in the previous step run:
+```
+meteor run android-device --mobile-server my_app_name.meteor.com
+```
+
+
