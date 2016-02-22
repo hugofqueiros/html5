@@ -1,10 +1,10 @@
 /**
  * Created by hfq on 31/01/16.
  */
-var webpack = require('webpack');
-var webpackDevMiddleware = require('webpack-dev-middleware');
-var webpackHotMiddleware = require('webpack-hot-middleware');
-var config = require('./webpack.config');
+var webpack = require('webpack')
+var webpackDevMiddleware = require('webpack-dev-middleware')
+var webpackHotMiddleware = require('webpack-hot-middleware')
+var config = require('./webpack.config')
 
 var app = new (require('express'))();
 var port = 3000;
