@@ -21,3 +21,9 @@ http://developer.telerik.com/featured/leveling-up-your-javascript/
 
 ## Debouncing
 https://davidwalsh.name/javascript-debounce-function
+
+## Async await
+https://ponyfoo.com/articles/understanding-javascript-async-await
+
+## Cheatsheet GOOD
+https://duckduckgo.com/?q=es6+cheatsheet&ia=answer&iax=1
