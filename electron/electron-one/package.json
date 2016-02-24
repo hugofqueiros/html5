@@ -1,0 +1,14 @@
+{
+  "name": "electron-one",
+  "version": "1.0.0",
+  "description": "just following the https://github.com/atom/electron-quick-start",
+  "main": "index.js",
+  "devDependencies": {
+    "electron-prebuilt": "^0.36.8"
+  },
+  "scripts": {
+    "start": "electron src/js/main.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
