@@ -21,6 +21,8 @@ http://premium.wpmudev.org/blog/css-flexbox/
 ## Flex playground
 http://codepen.io/enxaneta/full/adLPwv/
 
+http://bitsofco.de/6-reasons-to-start-using-flexbox/
+
 ## Paralax
 
 ### pure paralax websites
