@@ -6,3 +6,6 @@ http://rajasekarm.com/simple-node-cli/
 Fixing fixtures
 https://remysharp.com/2016/01/28/fixing-fixtures
 https://github.com/Snyk/snyk-resolve-deps-fixtures/blob/master/package.json
+
+Badges
+https://github.com/chetanraj/awesome-github-badges
