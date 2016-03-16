@@ -1,0 +1,19 @@
+{
+  "name": "webpack2-styles",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack main.js bundle.js -d && ws"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "css-loader": "^0.23.1",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.14"
+  },
+  "devDependencies": {
+    "local-web-server": "^1.2.1"
+  }
+}

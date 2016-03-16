@@ -7,3 +7,5 @@ http://jamesknelson.com/unlocking-decorators-and-other-es7-features-with-webpack
 https://medium.com/front-end-developers/webpack-your-workflow-7c8f59c0c97c#.o8a9ogc3g
 
 https://github.com/petehunt/webpack-howto#webpack-howto
+
+https://k94n.com/webpack-ftw
