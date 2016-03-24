@@ -1,0 +1,23 @@
+{
+  "name": "react-github-notetaker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "watchify -v -d -t [ reactify --es6 ] main.js -o compiled.js",
+    "build": "NODE_ENV=production browserify -t [ reactify --es6 ] main.js | uglifyjs > compiled.js"
+  },
+  "author": "Hugo Queiros",
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "reactify": "^1.1.1",
+    "uglify-js": "^2.6.2",
+    "watchify": "^3.7.0"
+  },
+  "dependencies": {
+    "moment": "^2.12.0",
+    "react": "^0.14.7"
+  }
+}
