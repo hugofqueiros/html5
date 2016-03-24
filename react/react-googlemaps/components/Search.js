@@ -14,14 +14,8 @@ var Search = React.createClass({
     },
 
     handleSubmit(event){
-
         event.preventDefault();
-
-        // When the form is submitted, call the onSearch callback that is passed to the component
-
         this.props.onSearch(this.state.value);
-
-        // Unfocus the text input field
         this.getDOMNode().querySelector('input').blur();
     },
 
@@ -42,7 +36,6 @@ var Search = React.createClass({
                 </div>
             </form>
         );
-
     }
 });
 

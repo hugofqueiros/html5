@@ -15,10 +15,10 @@ var App = React.createClass({
         }
         return {
             favorites: favorites,
-            currentAddress: 'Paris, France',
+            currentAddress: 'Madrid, Spain',
             mapCoordinates: {
-                lat: 48.856614,
-                lng: 2.3522219
+                lat: 40.4167754,
+                lng: -3.7037901999999576
             }
         };
     },
