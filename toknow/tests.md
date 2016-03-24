@@ -11,3 +11,6 @@ https://remysharp.com/2016/02/08/testing-tape-vs-tap
 
 ## Dealing with Garbage
 http://www.thedotpost.com/2015/12/samuel-saccone-dealing-with-garbage
+
+## Tests with Jasmine
+http://frontendinsights.com/1-testing-with-jasmine-introduction/

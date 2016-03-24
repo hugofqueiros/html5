@@ -15,6 +15,9 @@ http://caniuse.com/
 [http://mattkersley.com/responsive/](http://mattkersley.com/responsive/)
 http://designhooks.com/top-8-web-tools-test-responsive-design-site/
 
+## Validate manifest
+https://manifest-validator.appspot.com/
+
 ## Colors
 [Material Design Colors](http://www.designskilz.com/colors/)
 [Material Palette](http://www.materialpalette.com/)

@@ -21,3 +21,6 @@ http://www.bennadel.com/blog/3016-rendering-large-datasets-with-angular-2-beta-3
 
 ## Rock paper scissors game with angular2
 http://angular-craft.com/building-a-rock-paper-scissors-game-with-angular-2/
+
+## ANgular 2 with fake api
+http://www.sitepoint.com/angular-2-mockbackend/

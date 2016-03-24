@@ -31,3 +31,6 @@ https://github.com/zzarcon/nodegram
 
 ## Tooltips
 http://kushagragour.in/lab/hint/
+
+## Carrosel
+http://kenwheeler.github.io/slick/
