@@ -33,3 +33,6 @@ https://duckduckgo.com/?q=es6+cheatsheet&ia=answer&iax=1
 
 ## Nomads
 http://tech.evojam.com/2016/03/21/practical-intro-to-monads-in-javascript-either/
+
+## Promises
+http://www.2ality.com/2016/03/promise-rejections-vs-exceptions.html
