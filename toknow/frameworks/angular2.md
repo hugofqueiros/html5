@@ -24,3 +24,6 @@ http://angular-craft.com/building-a-rock-paper-scissors-game-with-angular-2/
 
 ## ANgular 2 with fake api
 http://www.sitepoint.com/angular-2-mockbackend/
+
+## Angular 2 - barebones
+https://github.com/DanWahlin/Angular2-BareBones

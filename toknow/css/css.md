@@ -15,6 +15,8 @@ http://cssdeck.com/labs/olr2i1nk
 
 # Flex
 
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
 ## Understanding CSS3 Flexbox
 http://premium.wpmudev.org/blog/css-flexbox/
 
