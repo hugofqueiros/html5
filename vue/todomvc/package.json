@@ -1,0 +1,21 @@
+{
+  "name": "todomvc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ws"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "director": "^1.2.8",
+    "todomvc-app-css": "^2.0.4",
+    "todomvc-common": "^1.0.2",
+    "vue": "^1.0.20"
+  },
+  "devDependencies": {
+    "local-web-server": "^1.2.1"
+  }
+}
