@@ -1,0 +1,20 @@
+# humanstxt.org/
+# The humans responsible
+
+# TEAM
+Frontend: Hugo Queirós
+From: Porto, Portugal
+LinkedIn: https://es.linkedin.com/in/hugoqueiros
+Twitter: @hugofqueiros
+Website: hugofqueiros.com
+
+# THANKS
+Name: Gulp, Babel
+
+# Site
+Last update: YYYY/MM/DD
+Language: English
+Doctype: HTML5
+Standards: HTML5, CSS3,..
+Components: Gulp, Babel
+Software: npm

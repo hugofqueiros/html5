@@ -1,0 +1,18 @@
+{
+    "version": "0.1.9",
+    "name": "ES6 Gulp Boilerplate",
+    "launch_path": "index.html",
+    "icons" : {
+        "128": "/static/img/favicon.png"
+    },
+    "developer": {
+        "name": "Hugo Queiros",
+        "url": "http://hugofqueiros.com"
+    },
+    "installs_allowed_from": [
+        "*"
+    ],
+    "default_locale": "en",
+    "permissions": {
+    },
+}
