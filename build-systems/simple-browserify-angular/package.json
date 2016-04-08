@@ -1,0 +1,27 @@
+{
+  "name": "simple-browserify-angular",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tut": "browserify src/main.js -o src/bundle.js",
+    "tut2": "watchify src/main.js -o src/bundle.js -d -v",
+    "tut3": "watchify src/main.js -o src/bundle.js -t [ babelify --presets [ es2015 ] ] -v",
+    "tut4": "watchify src/app -o src/bundle.js -t [ babelify --presets [ es2015 ] ] -v",
+    "server": "http-server ./src"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.3",
+    "babel": "^6.5.2",
+    "babel-preset-es2015": "^6.6.0",
+    "babelify": "^7.2.0",
+    "browserify": "^13.0.0",
+    "http-server": "^0.9.0",
+    "jquery": "^2.2.3",
+    "lodash": "^4.8.2",
+    "watchify": "^3.7.0"
+  }
+}

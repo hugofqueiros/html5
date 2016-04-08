@@ -1,0 +1,9 @@
+.bundle {
+    width: 100%;
+    background-color: red;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
