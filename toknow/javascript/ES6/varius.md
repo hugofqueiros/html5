@@ -3,6 +3,8 @@ Microsoft TypeScript: is basically ES6 plus optional type annotations
 
 https://ponyfoo.com/articles/all-aboard-the-es6-javascript-train
 
+https://scotch.io/tutorials/better-node-with-es6-pt-i
+
 ## Enumify
 http://www.2ality.com/2016/01/enumify.html
 
