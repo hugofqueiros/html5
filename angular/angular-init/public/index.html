@@ -1,0 +1,17 @@
+<html ng-app="app">
+<!-- Not in body bc like this you can access all DOM -->
+<head>
+	<meta charset="UTF-8">
+	<title>Playground</title>
+	<script src="bundle.js"></script>
+</head>
+<!-- Used in Angular 2 -->
+<!--<body ng-controller="MainController as vm">
+	{{ vm.foo }}
+    <div ng-controller="MainController2 as mc">
+        {{ mc.param }}
+    </div>
+    <div ui-view="mainView"></div>
+</body>-->
+<body ui-view="mainView"></body>
+</html>
