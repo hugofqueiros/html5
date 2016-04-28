@@ -27,3 +27,6 @@ http://www.sitepoint.com/angular-2-mockbackend/
 
 ## Angular 2 - barebones
 https://github.com/DanWahlin/Angular2-BareBones
+
+### Fast components in Angular 2
+http://developer.telerik.com/content-types/tutorials/super-fast-setup-angular-2-components-component-router/?utm_source=javascriptweekly&utm_medium=email

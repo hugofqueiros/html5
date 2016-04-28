@@ -65,3 +65,6 @@ http://codepen.io/sdras/pen/RrKLqL
 
 ## Loading and using external data in React
 http://mediatemple.net/blog/tips/loading-and-using-external-data-in-react/
+
+## Testing
+https://medium.com/javascript-inside/testing-in-react-getting-off-the-ground-5f569f3088a#.9p9pa0mte

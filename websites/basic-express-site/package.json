@@ -11,7 +11,7 @@
     "build": "npm run clean && npm run build-css",
     "watch": "npm run clean && npm run watch-css & nodemon server -e js,jade",
     "start": "node server",
-    "pm2:start": "pm2 start server --watch --name='basicexpress'"
+    "pm2:start": "pm2 start server.js --watch --name='basicexpress'"
   },
   "author": "",
   "license": "ISC",
