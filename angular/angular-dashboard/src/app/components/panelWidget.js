@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('app')
-    .component('panelWidget', {
+    .component('card', {
         //restrict: 'E',
         //replace: true,
         transclude: true,
