@@ -5,6 +5,10 @@ $text-color: #7A7A7A;
 $accent-color: rgb(0, 150, 136);
 $warning-color: #E75753;
 
+$card-height: 410px;
+$font-weight-bold: 600;
+$font-size-large: 22px;
+
 /*
 @font-face {
   font-family: 'Material Icons';
@@ -36,8 +40,8 @@ md-sidenav.md-locked-open.md-sidenav-left {
   max-width: $sidenav-left-width;
 }
 
-// panel-widget
-.panel-widget {
+// card
+.card {
   background-color: white;
 
   &-toolbar {
@@ -48,4 +52,30 @@ md-sidenav.md-locked-open.md-sidenav-left {
   &-tittle {
     color: $text-color;
   }
+}
+
+.card-fixed-height {
+  height: $card-height;
+}
+
+// libs overrides
+.material-icons {
+  vertical-align: middle;
+}
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+.nvd3.nv-pie .nv-pie-title {
+  fill: rgb(68, 68, 68);
+  font-weight: $font-weight-bold;
+  font-size: $font-size-large !important;
+}
+
+.nvtooltip {
+  background-color: transparent;
+  border: none;
+  font-weight: $font-weight-bold;
 }

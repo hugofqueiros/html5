@@ -1,11 +1,22 @@
 <div layout-gt-md="row">
-    <card flex title="Site visitors"  class="fixed-height-widget">
+    <card flex title="Site visitors"  class="card-fixed-height">
         <ng-include src="'app/views/partials/visitors.html'"></ng-include>
-    <card/><!--
+    </card>
+    <card flex title="Memory Load" class="card-fixed-height">
+        <ng-include src="'app/views/partials/memory.html'"></ng-include>
+    </card>
+    <card flex title="Warnings" class="card-fixed-height">
+        <ng-include src="'app/views/partials/warnings.html'"></ng-include>
+    </card>
+    <!--
     <panel-widget flex title="Warnings" template="app/views/partials/warnings.html" class="fixed-height-widget"></panel-widget>-->
 <!--    <panel-widget flex title="Memory load" template="app/views/partials/memory.html" class="fixed-height-widget"></panel-widget>-->
 
-    <!--<hc-chart flex title="Highcharts whatever" template="app/views/partials/hcchart.html" class="fixed-height-widget">Placeholder for generic chart</hc-chart>-->
+</div>
+<div layout-gt-md="row">
+    <card flex title="Temperature Chart" class="card-fixed-height">
+        <ng-include src="'app/views/partials/temperature.html'"></ng-include>
+    </card>
 </div>
 
 <!--<div layout-gt-md="row">

@@ -57,15 +57,20 @@
 <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
 <!-- inject:js -->
 <script src="app/app.js"></script>
-<script src="app/components/services/VisitorsService.js"></script>
-<script src="app/components/services/NavService.js"></script>
-<script src="app/components/directives/panelWidget.js"></script>
-<script src="app/components/directives/hcChart.js"></script>
+<script src="app/directives/hcChart/hcChart.js"></script>
+<script src="app/components/card/card.component.js"></script>
+<script src="app/services/WarningsService.js"></script>
+<script src="app/services/VisitorsService.js"></script>
+<script src="app/services/TemperaturesService.js"></script>
+<script src="app/services/PerformanceService.js"></script>
+<script src="app/services/NavService.js"></script>
+<script src="app/services/MemoryLoadService.js"></script>
+<script src="app/controllers/WarningsController.js"></script>
 <script src="app/controllers/VisitorsController.js"></script>
+<script src="app/controllers/TemperatureController.js"></script>
+<script src="app/controllers/PerformanceController.js"></script>
 <script src="app/controllers/MemoryController.js"></script>
 <script src="app/controllers/MainController.js"></script>
-<script src="app/controllers/HcController.js"></script>
-<script src="app/components/panelWidget.js"></script>
 <script src="app/index.js"></script>
 <!-- endinject -->
 
