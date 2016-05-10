@@ -23,7 +23,7 @@ angular.module('app')
 
                 setTimeout(function () {
                     if(chart) chart.reflow();
-                }, 1200)
+                }, 1000)
             }
         };
     });

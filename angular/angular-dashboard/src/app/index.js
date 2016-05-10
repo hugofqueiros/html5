@@ -23,6 +23,16 @@ angular.module('dashboard', ['ngAnimate', 'ngCookies',
                 data: {
                     title: 'Dashboard'
                 }
+            })
+
+            .state('home.profile', {
+                url: '/profile',
+                templateUrl: 'app/views/profile.html',
+                controller: 'ProfileController',
+                controllerAs: 'vm',
+                data: {
+                    title: 'Profile'
+                }
             });
 
         $urlRouterProvider.otherwise('/dashboard');

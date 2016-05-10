@@ -5,7 +5,6 @@ angular.module('app')
         transclude: true,
         bindings: {
             title: '@',
-            //template: '=',
             options: '='
         },
         controller : function($element){

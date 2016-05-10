@@ -9,7 +9,6 @@ $card-height: 410px;
 $font-weight-bold: 600;
 $font-size-large: 22px;
 
-/*
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
@@ -32,7 +31,6 @@ $font-size-large: 22px;
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
 }
-*/
 
 md-sidenav.md-locked-open.md-sidenav-left {
   width: $sidenav-left-width;
@@ -43,6 +41,7 @@ md-sidenav.md-locked-open.md-sidenav-left {
 // card
 .card {
   background-color: white;
+  min-width: 280px;
 
   &-toolbar {
     box-shadow: none;

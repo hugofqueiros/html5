@@ -1,0 +1,26 @@
+<div  ng-controller="searchController as sc">
+    <md-content ng-show="$showOptions" class="options">
+        <md-radio-group ng-model="sc.disableCaching" >
+            <md-radio-button  ng-value="true">Disable caching</md-radio-button>
+            <md-radio-button  ng-value="false">Enable caching</md-radio-button>
+        </md-radio-group>
+    </md-content>
+
+    <md-content class="md-padding">
+        <md-autocomplete placeholder="Search country"
+                         md-selected-item="sc.selectedCountry"
+                         md-search-text="sc.searchText"
+                         md-no-cache="sc.disableCaching"
+                         md-items="item in sc.querySearch(sc.searchText)"
+                         md-item-text="item.display">
+            <span md-highlight-text="sc.searchText">{{item.display}}</span>
+        </md-autocomplete>
+
+        <p>Selected country:
+            <b>{{sc.selectedCountry.display || 'No country selected'}}</b>
+        </p>
+        <p>Country code:
+            <b>{{sc.selectedCountry.code || 'No country selected'}}</b>
+        </p>
+    </md-content>
+</div>
