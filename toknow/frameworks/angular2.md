@@ -30,3 +30,6 @@ https://github.com/DanWahlin/Angular2-BareBones
 
 ### Fast components in Angular 2
 http://developer.telerik.com/content-types/tutorials/super-fast-setup-angular-2-components-component-router/?utm_source=javascriptweekly&utm_medium=email
+
+### Use the Angular cli for faster angular 2 projects
+https://scotch.io/tutorials/use-the-angular-cli-for-faster-angular-2-projects
