@@ -14,6 +14,9 @@ https://k94n.com/webpack-ftw
 
 https://github.com/petehunt/webpack-howto
 
+## Starter Tool
+https://github.com/HenrikJoreteg/hjs-webpack
+
 ## Getting an SPA to load the fastest possible way (and how Webpack can help you)
 http://rosenfeld.herokuapp.com/en/articles/2016-02-29-getting-an-spa-to-load-the-fastest-possible-way-and-how-webpack-can-help-you?utm_source=javascriptweekly&utm_medium=email
 
