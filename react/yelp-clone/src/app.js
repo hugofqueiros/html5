@@ -7,12 +7,33 @@ import ReactDOM from 'react-dom';
 import 'font-awesome/css/font-awesome.css';
 import './app.css';
 
-import { hasHistory } from 'react-router';
+/*import {browserHistory, Router, Route} from 'react-router';*/
 
-/*import App from 'containers/App/App';
+/*const Home = React.createClass({
+    render: function() {
+        return (<div>Hello world</div>)
+    }
+});
 
-import { hasHistory } from 'react-router';
+const routes = (
+    <Router>
+        <Route path="/" component={Home} />
+    </Router>
+);*/
+
+import App from 'containers/App/App';
+
+import {browserHistory} from 'react-router';
+
+import {hashHistory} from 'react-router'
 import makeRoutes from './routes';
+
+const routes = makeRoutes();
+
+
+/*import { hasHistory } from 'react-router';*/
+
+/*import makeRoutes from './routes';
 
 const routes = makeRoutes();
 
@@ -24,13 +45,18 @@ ReactDOM.render(
 mountNode);*/
 
 const mountNode = document.querySelector('#root');
+/*ReactDOM.render(
+    <App history={hashHistory}
+         routes={routes} />,
+    mountNode);*/
 
-const App = React.createClass({
-    render: function() {
-        return (<div>Hello World</div>)
-    }
-});
 
 ReactDOM.render(
-    <App history = { hasHistory }/>,
+    <App
+        history={browserHistory}
+        routes={routes}/>,
     mountNode);
+
+/*ReactDOM.render(
+    <App history = { hasHistory }/>,
+    mountNode);*/
