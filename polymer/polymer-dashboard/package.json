@@ -7,7 +7,9 @@
   "scripts": {
     "test": "gulp test:local",
     "start": "gulp serve",
-    "lint": "gulp lint"
+    "lint": "gulp lint",
+    "check-bower-deps": "ncu -m bower",
+    "check-npm-deps": "ncu"
   },
   "author": "",
   "license": "ISC",
@@ -39,6 +41,7 @@
     "jshint": "^2.8.0",
     "jshint-stylish": "^2.1.0",
     "merge-stream": "^1.0.0",
+    "npm-check-updates": "^2.6.7",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.1.5",
     "vulcanize": "^1.14.0",
