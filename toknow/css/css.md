@@ -17,7 +17,6 @@ http://12devsofxmas.co.uk/2016/01/day-7-surprising-css-properties-you-can-use-to
 http://cssdeck.com/labs/olr2i1nk
 
 # Flex
-
 https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 http://tutorialzine.com/2016/04/5-flexbox-techniques-you-need-to-know-about/
 

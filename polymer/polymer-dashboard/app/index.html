@@ -131,7 +131,7 @@
 
       <!-- Main Content -->
       <div class="content">
-        <iron-pages attr-for-selected="data-route" selected="{{route}}">
+        <!--<iron-pages attr-for-selected="data-route" selected="{{route}}">-->
 
           <section data-route="home">
             <paper-material elevation="1">
@@ -148,7 +148,9 @@
               <p class="paper-font-body2">This is another card.</p>
             </paper-material>
           </section>
+          <section-home data-route="home"></section-home>
 
+<!--          <section-overview data-route="overview"></section-overview>-->
           <section data-route="overview">
             <paper-material elevation="1">
               <h2 class="page-title">Overview</h2>
