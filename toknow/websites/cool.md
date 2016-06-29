@@ -19,3 +19,5 @@ http://www.webdesignerdepot.com/2016/02/design-trends-flat-design-2-0/
 http://www.mikiyakobayashi.com/
 
 http://fitradio.com/
+
+http://themeforest.net/item/jupiter-multipurpose-responsive-theme/full_screen_preview/5177775?ref=artbees&utm_source=Onextrapixel&utm_medium=BuySellAdsSyndicateSponsoredPosts&utm_campaign=BuyselladsJupiterV5campaign&ref=artbees&clickthrough_id=742076179&redirect_back=true
