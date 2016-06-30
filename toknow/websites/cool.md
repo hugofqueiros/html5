@@ -21,3 +21,7 @@ http://www.mikiyakobayashi.com/
 http://fitradio.com/
 
 http://themeforest.net/item/jupiter-multipurpose-responsive-theme/full_screen_preview/5177775?ref=artbees&utm_source=Onextrapixel&utm_medium=BuySellAdsSyndicateSponsoredPosts&utm_campaign=BuyselladsJupiterV5campaign&ref=artbees&clickthrough_id=742076179&redirect_back=true
+
+http://8theme.com/demo/xstore/wedding/
+
+http://8theme.com/demo/xstore/bike/
