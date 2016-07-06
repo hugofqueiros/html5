@@ -1,18 +1,29 @@
 /**
  * Created by hugo.queiros on 04/07/16.
  */
+
+var webpack = require('webpack');
+
 module.exports = {
     entry: './index.js',
 
     output: {
+        path: 'public',
         filename: 'bundle.js',
-        publicPath: ''
+        publicPath: '/'
     },
+
+    plugins: process.env.NODE_ENV === 'production' ? [
+        new webpack.optimize.DedupePlugin(),
+        new webpack.optimize.OccurrenceOrderPlugin(),
+        new webpack.optimize.UglifyJsPlugin()
+    ] : [],
 
     devServer: {
         inline: true, // reload on the fly
         port: 3333,
-        contentBase: '.'
+        contentBase: 'public/',
+        historyApiFallback: true
     },
 
     module: {
