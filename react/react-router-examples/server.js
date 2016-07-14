@@ -3,6 +3,7 @@
  */
 
 var express = require('express');
+var rewrite = require('express-urlrewrite');
 var path = require('path');
 var compression = require('compression');
 

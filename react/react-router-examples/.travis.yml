@@ -1,0 +1,14 @@
+sudo: false
+language: node_js
+node_js:
+- stable
+cache:
+  directories:
+  - node_modules
+before_install:
+  - sh -e /etc/init.d/xvfb start
+after_success:
+
+branches:
+  only:
+  - master

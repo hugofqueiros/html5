@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "history": "^2.1.2",
     "react": "^15.2.0",
     "react-dom": "^15.2.0",
     "react-router": "^2.5.2"
@@ -25,8 +26,10 @@
     "cross-env": "^1.0.8",
     "css-loader": "^0.23.1",
     "express": "^4.14.0",
+    "express-urlrewrite": "^1.2.0",
     "http-server": "^0.9.0",
     "if-env": "^1.0.0",
+    "react-a11y": "^0.3.3",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.1",
     "webpack-dev-middleware": "^1.6.1",
