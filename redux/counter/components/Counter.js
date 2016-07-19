@@ -44,7 +44,7 @@ class Counter extends Component {
 			</p>
 		)
 	}
-};
+}
 
 Counter.propTypes = {
 	value: PropTypes.number.isRequired,

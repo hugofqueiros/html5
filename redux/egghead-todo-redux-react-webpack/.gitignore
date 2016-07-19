@@ -1,0 +1,15 @@
+.idea
+
+dist
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+node_modules
