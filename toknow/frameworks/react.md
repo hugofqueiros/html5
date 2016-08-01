@@ -48,6 +48,8 @@ http://stack.formidable.com/radium/
 [enzyme] - airbnb testing tool - https://github.com/airbnb/enzyme
 https://medium.com/airbnb-engineering/enzyme-javascript-testing-utilities-for-react-a417e5e5090f#.mccmppkxa
 
+http://thereignn.ghost.io/a-step-by-step-tdd-approach-on-testing-react-components-using-enzyme
+
 ## Pusher - reactjs with websockets
 https://blog.pusher.com/making-reactjs-realtime-with-websockets/
 
