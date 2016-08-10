@@ -19,3 +19,6 @@ https://learnredux.com/
 
 ## Structuring React and Redux apps
 https://medium.com/front-end-hacking/structuring-react-and-redux-applications-255361d24f84#.h98ciq5nn
+
+## A blog and Portfolio CMS built with Rails, React, Redux, Material-UI, CSS Modules
+https://github.com/tsurupin/portfolio
