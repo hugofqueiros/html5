@@ -15,3 +15,6 @@ https://www.keycdn.com/blog/web-crawlers/
 
 ## Google Analytics
 https://css-tricks.com/learning-use-google-analytics-effectively-codepen/
+
+## Cross Mobile Platform Frameworks
+http://www.hongkiat.com/blog/cross-mobile-platform-framework-wora/

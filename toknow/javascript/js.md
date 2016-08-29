@@ -36,3 +36,6 @@ http://tech.evojam.com/2016/03/21/practical-intro-to-monads-in-javascript-either
 
 ## Promises
 http://www.2ality.com/2016/03/promise-rejections-vs-exceptions.html
+
+## Bind function
+https://davidwalsh.name/javascript-bind
