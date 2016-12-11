@@ -8,7 +8,7 @@ var getPlugins = function(env) {
   var plugins = [new webpack.optimize.OccurenceOrderPlugin()];
 
   switch(env) {
-    case: 'production':
+    case 'production':
       plugins.push(new webpack.optimize.DedupePlugin());
       plugins.push(new webpack.optimize.UglifyJsPlugin({minimize: true, sourceMap: true}));
       break;
