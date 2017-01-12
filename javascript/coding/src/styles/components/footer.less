@@ -1,0 +1,27 @@
+@import "../vars/colors";
+
+.footer {
+    height: 10vh;
+    width: 100%;
+    transition: opacity .3s ease .3s;
+    background-color: @color-base;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.footer p {
+    margin: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+    .footer {
+        font-size: 14px;
+    }
+};

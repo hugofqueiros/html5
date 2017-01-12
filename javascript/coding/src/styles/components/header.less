@@ -1,0 +1,23 @@
+@import "../vars/colors";
+
+.header {
+    height: 10vh;
+    width: 100%;
+    transition: opacity .3s ease .3s;
+    background-color: @color-base;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+@media only screen and (min-width: 768px) {
+    .header {
+        font-size: 30px;
+    }
+};
