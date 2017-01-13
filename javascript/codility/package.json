@@ -1,7 +1,7 @@
 {
-  "name": "coding",
+  "name": "gulp-es6-boilerplate",
   "version": "1.0.1",
-  "description": "Coding tests",
+  "description": "Codility tests",
   "main": "gulpfile.babel.js",
   "scripts": {
     "install:info": "npm install --loglevel=info",

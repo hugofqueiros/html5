@@ -1,6 +1,6 @@
 {
-    "version": "0.1.9",
-    "name": "Coding tests",
+    "version": "0.0.0",
+    "name": "Codility tests",
     "launch_path": "index.html",
     "icons" : {
         "128": "/static/img/favicon.png"

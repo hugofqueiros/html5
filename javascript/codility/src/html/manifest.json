@@ -1,6 +1,6 @@
 {
-  "name": "Coding tests",
-  "short_name": "Coding",
+  "name": "Codility tests",
+  "short_name": "Codility tests",
   "background_color": "#ffffff",
   "theme_color": "#f5f5f5",
   "display": "standalone",
