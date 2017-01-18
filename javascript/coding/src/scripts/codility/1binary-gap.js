@@ -30,7 +30,7 @@ export const solution = (N) => {
         num = parseInt(num / 2);
     }
 
-    console.log('num, binary: ', N, binaryNum)
+    // console.log('num, binary: ', N, binaryNum)
 
     return max;
 }
