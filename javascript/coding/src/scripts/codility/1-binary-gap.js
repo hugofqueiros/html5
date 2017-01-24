@@ -35,4 +35,4 @@ export const solution = (N) => {
     return max;
 }
 
-console.log('Binary Gap Solution: ', solution(1041));
+console.log('Binary Gap Solution : ', solution(1041));

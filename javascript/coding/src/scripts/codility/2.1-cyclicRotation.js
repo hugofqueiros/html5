@@ -25,10 +25,10 @@ export const solution = (A, K) => {
     // let part = A.slice(A.length - K);
     // return part.concat(A);
 
-    console.log('num', first, second, result);
+    //console.log('num', first, second, result);
 
     return result;
-}
+};
 
 const A = [1, 1, 2, 3, 5]; //[3, 8, 9, 7, 6];
 const K = 2;
