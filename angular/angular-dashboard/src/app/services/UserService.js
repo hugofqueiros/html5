@@ -22,7 +22,7 @@
             address: 'Street Whatever, 10 ' ,
             city: 'Madrid' ,
             state: '' ,
-            biography: 'I currently work as a Senior Front-end Web Programmer at Gigigo in Madrid. ' +
+            biography: 'I currently work as a Web developer contractor for Fyusion (San Francisco, USA). ' +
             'You know nothing Jon Snow!',
             postalCode : '000000'
         };
