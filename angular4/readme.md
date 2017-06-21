@@ -9,3 +9,13 @@
 
 ### cli resources
 https://github.com/angular/angular-cli/wiki
+
+```ng generate component <name>```
+
+## To know
+
+`[]` - signal attributes (to use for example on binding)
+
+ngModel - 2 way data binding
+ngStyle - dynamically assign a style
+ngClass - dynamically add or remove css classes
