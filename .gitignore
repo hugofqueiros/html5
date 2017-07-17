@@ -56,5 +56,6 @@ __build__/**
 # IDE #
 .idea/
 *.swp
+.vscode
 
 webappAngularFirebase/angular-seed
