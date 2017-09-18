@@ -10,3 +10,5 @@ jspm_packages
 
 # Compiled
 /build
+
+package-lock.json

@@ -7,10 +7,10 @@ export default class Banner extends Component {
             <div class={style.Banner}>
                 <div class={style.Banner__body}>
                     <h1 class={style.Banner__title}>
-                        Whatever
+                        Beach
                     </h1>
                     <h2 class={style.Banner__subtitle}>
-                        description
+                        The best beach in the world
                     </h2>
                 </div>
                 <img src="./assets/images/banner-image.jpg" />
