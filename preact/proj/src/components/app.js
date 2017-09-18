@@ -2,12 +2,12 @@ import {h, Component} from 'preact';
 import {Router} from 'preact-router';
 
 import Header from './header';
-import Sidebar from './sidebar';
 import Banner from './banner';
 import Footer from './footer';
 import Card from './card';
 import Home from '../routes/home';
 import Profile from '../routes/profile';
+import Other from '../routes/other';
 // import Home from 'async!./home';
 // import Profile from 'async!./profile';
 
@@ -27,13 +27,14 @@ export default class App extends Component {
         return (
             <div id="app" style={style.App}>
                 <Header />
-                <Banner/>
+                <Banner />
                 <Router onChange={this.handleRoute}>
-                    <Home path="/"/>
-                    <Profile path="/profile/" user="me"/>
-                    <Profile path="/profile/:user"/>
+                    <Home path="/" />
+                    <Other path="/other" />
+                    <Profile path="/profile/" user="me" />
+                    <Profile path="/profile/:user" />
                 </Router>
-                <Footer/>
+                <Footer />
             </div>
         );
     }

@@ -12,7 +12,7 @@ export default class Card extends Component {
 
         return (
             <section class={style.Card}>
-                <h2>{title}</h2>
+                <h2 class={style.Card__title}>{title}</h2>
                 {children}
             </section>
         );

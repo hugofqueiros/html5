@@ -7,6 +7,6 @@ export default class Footer extends Component {
             <div class={style.Footer}>
                 <p>© 2017 Hugo Queiros - All rights reserved.</p>
             </div>
-        )
+        );
     }
-};
+}
