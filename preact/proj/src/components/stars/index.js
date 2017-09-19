@@ -14,7 +14,7 @@ export default class Stars extends Component {
             let temp = [];
 
             for (let i = 0; i < 5; i++) {
-                let x = <img src={`./assets/icons/star-${(i < value) ? 'on' : 'off'}.svg`} />
+                let x = <img src={`./assets/images/star-${(i < value) ? 'on' : 'off'}.svg`} />
                 temp.push(x);
             }
             return temp;

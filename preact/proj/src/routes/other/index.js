@@ -17,7 +17,7 @@ export default class Other extends Component {
                                 imageUrl="./assets/images/laptop1.jpg"
                                 title="Laptop"
                                 description="Lenovo G50-80 15.6-inch Laptop (Core i3-5005U/8GB/1TB/Windows 10 Home/2GB Graphics), Black"
-                                rating={4}
+                                rating={5}
                             />
                             <Item
                                 imageUrl="http://g-ecx.images-amazon.com/images/G/31//img16/PC/sep/LaptopsRevamp/budget._V279288877_.jpg"
@@ -29,13 +29,13 @@ export default class Other extends Component {
                                 imageUrl="http://g-ecx.images-amazon.com/images/G/31//img16/PC/sep/LaptopsRevamp/budget._V279288877_.jpg"
                                 title="Laptop"
                                 description="Lenovo G50-80 15.6-inch Laptop (Core i3-5005U/8GB/1TB/Windows 10 Home/2GB Graphics), Black"
-                                rating={4}
+                                rating={2}
                             />
                             <Item
                                 imageUrl="http://g-ecx.images-amazon.com/images/G/31//img16/PC/sep/LaptopsRevamp/budget._V279288877_.jpg"
                                 title="Laptop"
                                 description="Lenovo G50-80 15.6-inch Laptop (Core i3-5005U/8GB/1TB/Windows 10 Home/2GB Graphics), Black"
-                                rating={4}
+                                rating={3}
                             />
                         </Row>
                     </Card>
