@@ -15,7 +15,7 @@ class SongCreate extends Component {
         event.preventDefault();
 
         this.props.mutate({
-            variables: {
+            variables: { // passing the query variable to the mutation
                 title: this.state.title
             },
             refetchQueries: [{ query: query }]
