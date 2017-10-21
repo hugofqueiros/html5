@@ -11,7 +11,11 @@ import SongCreate from './components/SongCreate';
 import SongList from './components/SongList';
 import SongDetail from './components/SongDetail';
 
-const client = new ApolloClient({});
+const client = new ApolloClient({
+  // go fetch every data that you need and use their id to identify that record
+  // we are assuming we are using an unique id for every piece of tdata, in mongoDB that is a safe assumption
+  dataIdFromObject: o => o.id
+});
 
 const Root = () => {
   return (
