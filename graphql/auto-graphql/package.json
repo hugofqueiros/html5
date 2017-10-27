@@ -8,6 +8,9 @@
   },
   "author": "",
   "license": "ISC",
+  "prettier": {
+    "tabWidth": 2
+  },
   "dependencies": {
     "apollo-client": "^0.8.2",
     "axios": "^0.15.3",
@@ -34,5 +37,9 @@
     "react-router": "^3.0.2",
     "webpack": "^2.2.0",
     "webpack-dev-middleware": "^1.9.0"
+  },
+  "devDependencies": {
+    "css-loader": "^0.28.7",
+    "style-loader": "^0.19.0"
   }
 }
