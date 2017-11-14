@@ -59,3 +59,5 @@ __build__/**
 .vscode
 
 webappAngularFirebase/angular-seed
+
+package-lock.json
