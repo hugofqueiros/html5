@@ -1,3 +1,4 @@
+// not going to import but running at runtime function for the async await functions
 import 'babel-polyfill';
 import express from 'express';
 import { matchRoutes } from 'react-router-config';
@@ -19,10 +20,13 @@ app.use(
 		}
 	})
 );
+
+// treat public folder as a static or as a public directory that is available to the ouside world
 app.use(express.static('public'));
 app.get('*', (req, res) => {
 	const store = createStore(req);
 
+    // checks for the components that are going to be rendered and loads data
 	const promises = matchRoutes(Routes, req.path)
 		.map(({ route }) => {
 			return route.loadData ? route.loadData(store) : null;

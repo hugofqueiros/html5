@@ -5,10 +5,10 @@ import { fetchCurrentUser } from './actions';
 
 const App = ({ route }) => {
 	return (
-        <div>
-          <Header/>
+		<div>
+			<Header />
 			{renderRoutes(route.routes)}
-        </div>
+		</div>
 	);
 };
 

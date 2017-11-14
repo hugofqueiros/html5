@@ -7,6 +7,9 @@ import serialize from 'serialize-javascript';
 import { Helmet } from 'react-helmet';
 import Routes from '../client/Routes';
 
+/**
+ * StaticRouter is related to context react, but it's more used to hadnle redirects and errors
+ */
 export default (req, store, context) => {
 	const content = renderToString(
         <Provider store={store}>

@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage';
 import UsersListPage from './pages/UsersListPage';
 import NotFoundPage from './pages/NotFoundPage';
 import AdminsListPage from './pages/AdminsListPage';
+// import UsersListPage, { loadData} from './pages/UsersListPage';
 
 export default [
   {
@@ -19,6 +20,8 @@ export default [
         path: '/admins'
       },
       {
+          // component: UsersListPage
+          // loadData
         ...UsersListPage,
         path: '/users'
       },
@@ -28,3 +31,14 @@ export default [
     ]
   }
 ];
+
+// import { Route } from 'react-router-dom';
+// import Home from './components/Home';
+
+// export default () => {
+//     return (
+//         <div>
+//             <Route exact path="/" component={Home} />
+//         </div>
+//     )
+// }
