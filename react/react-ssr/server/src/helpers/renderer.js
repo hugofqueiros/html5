@@ -9,6 +9,8 @@ import Routes from '../client/Routes';
 
 /**
  * StaticRouter is related to context react, but it's more used to hadnle redirects and errors
+ * serialize avoids attacks xss attacks (cross-site scripting attacks):
+ * take some user input that is somewhat malicious in nature and accidently execute it
  */
 export default (req, store, context) => {
 	const content = renderToString(

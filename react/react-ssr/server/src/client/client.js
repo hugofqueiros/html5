@@ -11,6 +11,7 @@ import axios from 'axios';
 import Routes from './Routes';
 import reducers from './reducers';
 
+// axios Instance
 const axiosInstance = axios.create({
 	baseURL: '/api'
 });

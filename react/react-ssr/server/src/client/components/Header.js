@@ -3,12 +3,14 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 const Header = ({ auth }) => {
-	const authButton = auth ? (
+    // it's api because we want to go to our render server
+    const authButton = auth ? (
 		<a href="/api/logout">Logout</a>
 	) : (
 		<a href="/api/auth/google">Login</a>
 	);
 
+    // we use Link when we want to navigate around the react app
 	return (
 		<nav>
 			<div className="nav-wrapper">
