@@ -8,7 +8,10 @@ new Vue({
         finishedLink: '<a href="google.com">Google</a>',
         name: 'Hugo',
         age: 34,
-        srcImage: 'http://www.robotshop.com/media/catalog/product/cache/15/image/900x900/9df78eab33525d08d6e5fb8d27136e95/e/z/ez-robot-jd-humanoid-robot.jpg'
+        srcImage: 'http://www.robotshop.com/media/catalog/product/cache/15/image/900x900/9df78eab33525d08d6e5fb8d27136e95/e/z/ez-robot-jd-humanoid-robot.jpg',
+        counter: 0,
+        x: 0,
+        y: 0
     },
     methods: {
         sayHello: function() {
@@ -21,6 +24,16 @@ new Vue({
         random: function() {
             return Math.random(0, 100);
         },
-        increase: function(step, event)
+        increase: function(step, event) {
+            this.count += step;
+        },
+        updateCoordinates: function(event) {
+            this.x = event.clientX;
+            this.y = event.clientY;
+        },
+        dummy: function(event) {
+            event.stopPropagation();
+
+        }
     }
 })
