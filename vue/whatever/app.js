@@ -10,8 +10,33 @@ new Vue({
         age: 34,
         srcImage: 'http://www.robotshop.com/media/catalog/product/cache/15/image/900x900/9df78eab33525d08d6e5fb8d27136e95/e/z/ez-robot-jd-humanoid-robot.jpg',
         counter: 0,
+        secondCounter: 0,
         x: 0,
-        y: 0
+        y: 0,
+        attachRed: false
+    },
+    // use computed bc it's more optimized, for cache porpuses and other stuff... it's synchronous (you can't do async, call backend and stuff)
+    computed: {
+        output: function() {
+            console.log('Computed');
+            return this.counter > 5 ? 'Greater 5' : 'Smaller than 5'
+        },
+        divClasses: function() {
+            return {
+                red: this.attachRed,
+                blue: !this.attachRed
+            }
+        }
+    },
+    // async things
+    watch: {
+        counter: function(value) {
+            var vm = this;
+
+            setTimeout(function() {
+                vm.counter = 0;
+            }, 2000);
+        }
     },
     methods: {
         sayHello: function() {
@@ -37,6 +62,9 @@ new Vue({
         },
         alertMe: function() {
             alert('Alert!');
+        },
+        changeLink: function() {
+            this.link = 'http://apple.com'
         }
     }
 })
