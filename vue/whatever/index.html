@@ -9,8 +9,11 @@
     <button v-on:click="increase(2, $event)">Click me</button>
     <button v-on:click="counter++">Click me</button>
     <p>{{ counter * 2 > 10 ? 'Greater than 10' : 'Smaller than 10' }}</p>
+
+    <!--><-->
     <p>Counter: {{ counter }} | {{ secondCounter }}</p>
     <p>Result: {{ result() }} | {{ output }}</p>
+
     <p>{{ counter }}</p>
     <p v-on:mousemove="updateCoordinates">Coordinates: {{ x }} / {{ y }} -
         <span v-on:mousemove="dummy">DEAD SPOT</span>
@@ -32,6 +35,7 @@
         </div>
         <!-- 5) Pre-Populate this input with your name (set the "value" attribute) -->
         <div>
+            <!-- 2 way binding -->
             <input type="text" v-model="name">
         </div>
     <hr>
@@ -42,7 +46,12 @@
         <div class="demo" @click="attachRed = !attachRed" :class="{red: attachRed, blue: attachRed}"></div>
         <div class="demo" :class="{red: attachRed}"></div>
         <div class="demo" :class="divClasses"></div>
+        <div class="demo" :class="[color, {red: attachRed}]"></div>
+        <hr></hr>
+        <div class="demo" :style"{backgroundColor: color}"></div>
+        <div class="demo" :style"myStyle"></div>
+        <div class="demo" :style"[myStyle, {height: width + 'px']"></div>
         <hr>
-        <input type="type" v-model="">
+        <input type="type" v-model="color">
     </div>
 </div>

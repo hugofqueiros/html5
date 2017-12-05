@@ -1,7 +1,9 @@
 // Put this in the script section in JSFiddle
 // In a local setup, you need to merge this and the index.html file into one file
 new Vue({
-	el: '#app',
+    // Connect to Dom
+    el: '#app',
+    // Store Data to be used
 	data: {
         title: 'Hello World!',
         link: 'http://google.com',
@@ -13,9 +15,12 @@ new Vue({
         secondCounter: 0,
         x: 0,
         y: 0,
-        attachRed: false
+        attachRed: false,
+        color: 'green',
+        color2: 'gray'
     },
     // use computed bc it's more optimized, for cache porpuses and other stuff... it's synchronous (you can't do async, call backend and stuff)
+    // Dependet Properties
     computed: {
         output: function() {
             console.log('Computed');
@@ -25,6 +30,12 @@ new Vue({
             return {
                 red: this.attachRed,
                 blue: !this.attachRed
+            }
+        },
+        myStyle: function() {
+            return {
+                width: this.width + 'px',
+                backgroundColor: 'green'
             }
         }
     },
@@ -38,6 +49,7 @@ new Vue({
             }, 2000);
         }
     },
+    // methods: Methods of this Vue instance
     methods: {
         sayHello: function() {
             this.title = 'Hello!';
@@ -58,7 +70,6 @@ new Vue({
         },
         dummy: function(event) {
             event.stopPropagation();
-
         },
         alertMe: function() {
             alert('Alert!');
