@@ -8,6 +8,7 @@ import Card from './card';
 import Home from '../routes/home';
 import Profile from '../routes/profile';
 import Other from '../routes/other';
+import BreadCrumbs from './breadcrumbs';
 // import Home from 'async!./home';
 // import Profile from 'async!./profile';
 
@@ -28,6 +29,7 @@ export default class App extends Component {
             <div id="app" style={style.App}>
                 <Header />
                 <Banner />
+                <BreadCrumbs />
                 <Router onChange={this.handleRoute}>
                     <Home path="/" />
                     <Other path="/other" />

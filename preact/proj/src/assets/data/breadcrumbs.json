@@ -1,0 +1,10 @@
+[
+    {
+      "name": "Root",
+      "url": "/"
+    },
+    {
+      "name": "Other",
+      "url": "/other"
+    }
+]

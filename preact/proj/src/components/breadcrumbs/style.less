@@ -1,0 +1,35 @@
+.breadcrumbs {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    margin-bottom: 24px;
+    display: block;
+}
+
+.crumb {
+    display: inline-block;
+
+    &:after {
+        content: '';
+        display: inline-block;
+        width: 5px;
+        height: 10px;
+        background-image: url('../../assets/icons/carrot.svg');
+        background-repeat: no-repeat;
+        margin-left: 13px;
+        margin-right: 13px;
+    }
+
+    &:last-child {
+        &:after {
+            display: none;
+        }
+    }
+}
+
+.crumbLink {
+    text-transform: uppercase;
+    color: #0067DB;
+    font-size: 12px;
+}
+
