@@ -1,13 +1,19 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
+    <p>Server Status: {{ status }}</p>
     <router-view/>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'app'
+  name: 'app',
+  data: function() {
+    return {
+      status: 'Critical'
+    }
+  }
 }
 </script>
 
