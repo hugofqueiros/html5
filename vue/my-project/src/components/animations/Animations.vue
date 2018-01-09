@@ -14,16 +14,16 @@
                 <transition :name="alertAnimation">
                     <div class="alert alert-info" v-show="show">This is some Info</div>
                 </transition>
-                <transition name="slide" type="animation" appear>
+                <transition name="slide" type="animation" appear> <!-- make sure vuejs checks if the animation finishes (not the transition) -->
                     <div class="alert alert-info" v-if="show">This is some Info</div>
                 </transition>
                 <transition
                         enter-active-class="animated bounce"
                         leave-active-class="animated shake"
-                >
+                >   <!-- hardcoded classes from animate.css -->
                     <div class="alert alert-info" v-if="show">This is some Info</div>
                 </transition>
-                <transition :name="alertAnimation" mode="out-in">
+                <transition :name="alertAnimation" mode="out-in"> <!-- old fades out before new fades in -->
                     <div class="alert alert-info" v-if="show" key="info">This is some Info</div>
                     <div class="alert alert-warning" v-else key="warning">This is some Warning</div>
                 </transition>
@@ -186,6 +186,7 @@ export default {
   position: absolute;
 }
 
+/* only for transition-group vuejs uses transform to move element */
 .slide-move {
   transition: transform 1s;
 }

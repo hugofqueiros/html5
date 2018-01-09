@@ -11,6 +11,7 @@ import Directives from '@/components/directives/Directives';
 import Filter from '@/components/filter/Filter';
 import Mixins from '@/components/mixins/Mixins';
 import Animations from '../components/animations/Animations.vue';
+import Quiz from '../components/animations/Quiz.vue';
 
 Vue.use(Router);
 
@@ -61,6 +62,10 @@ export default new Router({
       path: '/animations',
       name: 'Animations',
       component: Animations,
+    }, {
+      path: '/quiz',
+      name: 'Quiz',
+      component: Quiz,
     },
   ],
 });
