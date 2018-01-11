@@ -11,11 +11,35 @@ import Directives from '@/components/directives/Directives';
 import Filter from '@/components/filter/Filter';
 import Mixins from '@/components/mixins/Mixins';
 import Animations from '../components/animations/Animations.vue';
-import Quiz from '../components/animations/Quiz.vue';
+import Quiz from '../components/animations/quiz/Quiz.vue';
+import Resource from '../components/vue-resource/Resource.vue';
+
+// import UserRoute from '../components/routing/basics/user/User.vue';
+import UserStartRoute from '../components/routing/basics/user/UserStart.vue';
+import UserDetailRoute from '../components/routing/basics/user/UserDetail.vue';
+import UserEditRoute from '../components/routing/basics/user/UserEdit.vue';
+import HomeRoute from '../components/routing/basics/Home.vue';
+import HeaderRoute from '../components/routing/basics/Header.vue';
+
+const UserRoute = (resolve) => {
+  require.ensure(['../components/routing/basics/user/User.vue'], () => {
+    resolve(require('../components/routing/basics/user/User.vue'));
+  }, 'user');
+};
 
 Vue.use(Router);
 
 export default new Router({
+  mode: 'history', // default is hash but with history it doesn't have #
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition; // if the user clicks back it doesn't go the the hash position
+    }
+    if (to.hash) {
+      return { selector: to.hash };
+    }
+    return { x: 0, y: 0 };
+  },
   routes: [
     {
       path: '/',
@@ -66,6 +90,42 @@ export default new Router({
       path: '/quiz',
       name: 'Quiz',
       component: Quiz,
+    }, {
+      path: '/resource',
+      name: 'Resource',
+      component: Resource,
+    }, {
+      path: '/routing',
+      name: 'homeroute',
+      components: {
+        default: HomeRoute,
+        'header-top': HeaderRoute,
+      },
+    }, {
+      path: '/routing/user',
+      name: 'userroute',
+      props: { name: 'STARS' },
+      components: {
+        default: UserRoute,
+        'header-bottom': HeaderRoute,
+      },
+      children: [
+        { path: '', component: UserStartRoute },
+        { path: ':id',
+          component: UserDetailRoute,
+          beforeEnter: (to, from, next) => {
+            console.log('inside route setup');
+            next();
+          },
+        }, {
+          path: ':id/edit', component: UserEditRoute, name: 'userEdit' },
+      ],
+    }, {
+      path: '/redirect-me',
+      redirect: { name: 'homeroute' },
+    }, {
+      path: '*',
+      redirect: '/',
     },
   ],
 });

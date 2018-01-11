@@ -1,6 +1,7 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue';
+import VueResource from 'vue-resource';
 
 import './startup';
 
@@ -8,6 +9,32 @@ import App from './App.vue';
 import router from './router';
 
 Vue.config.productionTip = false;
+
+// import {routes} from './routes';
+// Vue.use(VueRouter);
+// const router = new VueRouter({
+//   routes
+// })
+
+router.beforeEach((to, from, next) => {
+  console.log('global beforeEach');
+  next();
+});
+
+Vue.use(VueResource);
+Vue.http.options.root = 'https://vuejs-http-da09f.firebaseio.com';
+Vue.http.interceptors.push((request, next) => {
+  console.log(request);
+  if (request.method == 'POST') {
+    request.method = 'PUT';
+  }
+  next((response) => {
+    response.json = () => {
+      return { messages: response.body };
+    };
+  });
+});
+
 
 // Managing state (should use vuex)
 export const eventBus = new Vue({
