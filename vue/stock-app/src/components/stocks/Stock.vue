@@ -21,7 +21,7 @@
                     <button
                             class="btn btn-success"
                             @click="buyStock"
-                            :disabled="insufficientFunds || quantity <= 0 || !Number.isInteger(quantity)"
+                            :disabled="insufficientFunds || quantity <= 0 || Number.isInteger(quantity)"
                     >{{ insufficientFunds ? 'Insufficient Funds' : 'Buy' }}
                     </button>
                 </div>
@@ -46,10 +46,13 @@ export default {
   },
   computed: {
     funds() {
+      console.log('this.$store', this.$store.getters.funds);
+
       return this.$store.getters.funds;
     },
     insufficientFunds() {
-      return this.quantity * this.stock.price > this.funds;
+      console.log('insufficientFunds', this.quantity, this.quantity * this.stock.price, this.funds);
+      return (this.quantity * this.stock.price > this.funds);
     }
   },
   methods: {
