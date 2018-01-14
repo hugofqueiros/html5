@@ -7,6 +7,7 @@ import './startup';
 
 import App from './App.vue';
 import router from './router';
+import { store } from './store/store';
 
 Vue.config.productionTip = false;
 
@@ -77,6 +78,7 @@ Vue.mixin({
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  store,
   router,
   render: h => h(App), // best way to write your template, it doesnt have
   // to be a string for example (more flexibility)

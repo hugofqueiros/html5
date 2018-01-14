@@ -15,17 +15,39 @@ import Quiz from '../components/animations/quiz/Quiz.vue';
 import Resource from '../components/vue-resource/Resource.vue';
 
 // import UserRoute from '../components/routing/basics/user/User.vue';
-import UserStartRoute from '../components/routing/basics/user/UserStart.vue';
-import UserDetailRoute from '../components/routing/basics/user/UserDetail.vue';
-import UserEditRoute from '../components/routing/basics/user/UserEdit.vue';
+// import UserStartRoute from '../components/routing/basics/user/UserStart.vue';
+// import UserDetailRoute from '../components/routing/basics/user/UserDetail.vue';
+// import UserEditRoute from '../components/routing/basics/user/UserEdit.vue';
 import HomeRoute from '../components/routing/basics/Home.vue';
 import HeaderRoute from '../components/routing/basics/Header.vue';
 
+// Lazy Loading - loading code that you need (good for bug apps)
+// Limiting the number of http requests, but only for what you need
+// webpack won't include it on the inicial bundle but will rather create multiple bundles
 const UserRoute = (resolve) => {
   require.ensure(['../components/routing/basics/user/User.vue'], () => {
+    // resolves like a promise (async) webpack it's only doing it if we really need it
     resolve(require('../components/routing/basics/user/User.vue'));
   }, 'user');
 };
+
+const UserStartRoute = (resolve) => {
+  require.ensure(['../components/routing/basics/user/UserStart.vue'], () => {
+    resolve(require('../components/routing/basics/user/UserStart.vue'));
+  }, 'user');
+};
+const UserEditRoute = (resolve) => {
+  require.ensure(['../components/routing/basics/user/UserEdit.vue'], () => {
+    resolve(require('../components/routing/basics/user/UserEdit.vue'));
+  }, 'user');
+};
+const UserDetailRoute = (resolve) => {
+  require.ensure(['../components/routing/basics/user/UserDetail.vue'], () => {
+    resolve(require('../components/routing/basics/user/UserDetail.vue'));
+  }, 'user'); // 'user' is the group name, this will create a bundle for the user group, if we take that out it will create multiple
+};
+
+import State from '../components/state-management/State.vue';
 
 Vue.use(Router);
 
@@ -126,6 +148,10 @@ export default new Router({
     }, {
       path: '*',
       redirect: '/',
+    }, {
+      path: '/state',
+      name: 'State',
+      component: State,
     },
   ],
 });
