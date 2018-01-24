@@ -44,7 +44,7 @@
     <hr>
     <div id="whatever">
         <div class="demo" @click="attachRed = !attachRed" :class="{red: attachRed, blue: attachRed}"></div>
-        <div class="demo" :class="{red: attachRed}"></div>
+        <div class="demo" v-bind:class="{red: attachRed}"></div>
         <div class="demo" :class="divClasses"></div>
         <div class="demo" :class="[color, {red: attachRed}]"></div>
         <hr></hr>

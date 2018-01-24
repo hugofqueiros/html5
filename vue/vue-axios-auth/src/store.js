@@ -33,10 +33,10 @@ export default new Vuex.Store({
       }, expirationTime * 1000)
     },
     signup ({commit, dispatch}, authData) {
-      axios.post('/signupNewUser?key=AIzaSyBCSxP6lCppNTH3KbuPPZw45uqbG5dYcyg', {
+      axiosAuth.post('/signupNewUser?key=AIzaSyBCSxP6lCppNTH3KbuPPZw45uqbG5dYcyg', {
         email: authData.email,
         password: authData.password,
-        returnSecureToken: true
+        returnSecureToken: true // give us a valid user
       })
         .then(res => {
           console.log(res)
@@ -45,7 +45,9 @@ export default new Vuex.Store({
             userId: res.data.localId
           })
           const now = new Date()
+          // make it expire an hour from now
           const expirationDate = new Date(now.getTime() + res.data.expiresIn * 1000)
+          // Browser Local storage API
           localStorage.setItem('token', res.data.idToken)
           localStorage.setItem('userId', res.data.localId)
           localStorage.setItem('expirationDate', expirationDate)
@@ -55,7 +57,7 @@ export default new Vuex.Store({
         .catch(error => console.log(error))
     },
     login ({commit, dispatch}, authData) {
-      axios.post('/verifyPassword?key=AIzaSyBCSxP6lCppNTH3KbuPPZw45uqbG5dYcyg', {
+      axiosAuth.post('/verifyPassword?key=AIzaSyBCSxP6lCppNTH3KbuPPZw45uqbG5dYcyg', {
         email: authData.email,
         password: authData.password,
         returnSecureToken: true

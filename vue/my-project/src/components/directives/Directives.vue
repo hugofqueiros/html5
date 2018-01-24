@@ -21,6 +21,7 @@
 
 <script>
 export default {
+  // e.g. Directives are special attributes with the v-
   directives: {
     "local-highlight": {
       bind(el, binding, vnode) {
