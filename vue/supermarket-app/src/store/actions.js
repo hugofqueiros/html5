@@ -5,4 +5,3 @@ export default {
         commit(types.MUTATE_UPDATE_VALUE, payload);
     },
 };
-
