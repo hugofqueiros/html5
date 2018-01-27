@@ -51,5 +51,7 @@ module.exports = {
             'VariableDeclarator': 2
         }],
         'arrow-body-style': [0],
+        'object-curly-spacing': [0],
+        'object-shorthand': [0],
     }
 }
