@@ -1,4 +1,5 @@
 import Pace from 'pace-progress';
+import 'babel-polyfill';
 
 Pace.start();
 

@@ -53,5 +53,8 @@ module.exports = {
         'arrow-body-style': [0],
         'object-curly-spacing': [0],
         'object-shorthand': [0],
+        'comma-dangle': ['error', 'never'],
+        // allow debugger during development
+        'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
     }
 }

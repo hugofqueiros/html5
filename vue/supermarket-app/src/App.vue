@@ -1,13 +1,15 @@
 <template>
     <div id="app" class="container-fluid">
-        <app-header/>
-        <div class="row">
-            <div class="col-xs-12">
-                <transition name="slide" mode="out-in">
-                    <router-view/>
-                </transition>
-            </div>
-        </div>
+        <b-container fluid>
+            <app-header/>
+            <b-row>
+                <b-col>
+                    <transition name="slide" mode="out-in">
+                        <router-view/>
+                    </transition>
+                </b-col>
+            </b-row>
+        </b-container>
     </div>
 </template>
 

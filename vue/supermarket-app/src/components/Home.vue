@@ -4,7 +4,7 @@
         <h1>Supermarket X app</h1>
         <h3>Buy all your products online</h3>
         <hr>
-        <p>Your funds: {{ wallet | currency }}</p>
+        <p>Your funds: {{ total | currency }}</p>
     </div>
 </template>
 
@@ -16,12 +16,12 @@ export default {
         };
     },
     computed: {
-        funds() {
-
+        total() {
+            return this.wallet;
         }
     },
     methods: {
 
-    },
-}
+    }
+};
 </script>
