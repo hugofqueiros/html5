@@ -1,7 +1,7 @@
 <template>
-    <div id="app" class="container-fluid">
+    <div id="app">
+        <app-header/>
         <b-container fluid>
-            <app-header/>
             <b-row>
                 <b-col>
                     <transition name="slide" mode="out-in">
@@ -31,7 +31,6 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    margin-top: 10px;
 }
 
 .slide-enter-active {
