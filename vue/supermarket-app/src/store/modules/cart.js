@@ -1,7 +1,7 @@
 const state = {
-    listOfCart: [],
+    listOfCart: []
 };
 
 export default {
-    state,
+    state
 };
