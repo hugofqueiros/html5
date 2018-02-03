@@ -9,7 +9,8 @@
 </template>
 
 <script>
-import { mapActions } from "vuex";
+import { mapActions } from 'vuex';
+// import store from '../store/store';
 
 export default {
     data() {
@@ -17,6 +18,12 @@ export default {
             wallet: 100
         };
     },
+    // created () {
+    //     this.fetchData()
+    // },
+    // beforeRouteEnter(to, from, next) {
+    //     store.dispatch('fetchProducts');
+    // },
     computed: {
         total() {
             return this.wallet;

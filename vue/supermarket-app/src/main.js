@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 import App from './App';
 import router from './router';
+import store from './store';
 
 import './startup';
 import './resource';
@@ -16,6 +17,7 @@ Vue.config.productionTip = false;
 /* eslint-disable no-new */
 new Vue({
     el: '#app',
+    store,
     router,
     render: h => h(App)
 });

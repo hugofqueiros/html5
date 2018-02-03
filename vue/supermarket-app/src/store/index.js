@@ -12,13 +12,13 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
     state: {
-        value: 0,
+        value: 0
     },
     getters,
     mutations,
     actions,
     modules: {
         cart,
-        products,
-    },
+        products
+    }
 });
