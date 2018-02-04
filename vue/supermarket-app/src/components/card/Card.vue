@@ -1,11 +1,10 @@
 <template>
-    <b-card title="product"
-        img-src="image"
-        img-alt="image"
+    <b-card :title="product"
+        :img-src="image"
+        :img-alt="image"
         img-top
         tag="article"
-        style="max-width: 20rem;"
-        class="mb-2">
+        class="mb-2 Card">
         <p class=card-text>
             {{ description }}
         </p>
@@ -17,44 +16,21 @@ export default {
     props: {
         prod: {
             type: Object
-        },
-        company: {
-            type: String,
-            //required: true
-        },
-        product: {
-            type: String,
-            //required: true
-        },
-        description: {
-            type: String
-        },
-        id: {
-            type: Number
-        },
-        image: {
-            type: String,
-            //required: true
-        },
-        price: {
-            type: Number
-        },
-        slogan: {
-            type: String
-        },
-        type: {
-            type: Number
         }
     },
     data() {
-        return {};
-    },
-    created() {
-        console.log('this: ', this);
+        return {
+            product: this.prod.product,
+            image: this.prod.image,
+            description: this.prod.description
+        };
     }
-}
+};
 </script>
 
 <style scoped>
-
+.Card {
+    max-width: 20rem;
+    margin: 0 auto;
+}
 </style>

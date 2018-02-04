@@ -1,15 +1,9 @@
 <template>
     <div id="app">
         <app-header/>
-        <b-container fluid>
-            <b-row>
-                <b-col>
-                    <transition name="slide" mode="out-in">
-                        <router-view/>
-                    </transition>
-                </b-col>
-            </b-row>
-        </b-container>
+        <transition name="slide" mode="out-in">
+            <router-view/>
+        </transition>
     </div>
 </template>
 

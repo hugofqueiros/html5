@@ -1,6 +1,6 @@
 // Getters
 export const VALUE = 'VALUE';
-export const GET_PRODUCTS = 'products/GET_PRODUCTS';
+export const GET_PRODUCTS = 'GET_PRODUCTS';
 
 // Mutations
 export const MUTATE_UPDATE_VALUE = 'MUTATE_UPDATE_VALUE';
