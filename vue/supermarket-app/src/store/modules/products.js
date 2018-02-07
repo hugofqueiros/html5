@@ -34,6 +34,7 @@ const actions = {
 };
 
 const getters = {
+    // [GET_PRODUCTS]: ({products}) => products
     GET_PRODUCTS: ({products}) => products
 };
 

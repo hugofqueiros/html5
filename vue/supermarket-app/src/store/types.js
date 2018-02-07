@@ -1,13 +1,17 @@
 // Getters
 export const VALUE = 'VALUE';
 export const GET_PRODUCTS = 'GET_PRODUCTS';
+export const GET_CART = 'GET_CART';
 
 // Mutations
 export const MUTATE_UPDATE_VALUE = 'MUTATE_UPDATE_VALUE';
 export const SET_PRODUCTS = 'SET_PRODUCTS';
 export const SET_PRODUCTS_LOADING = 'SET_PRODUCTS_LOADING';
 export const ERROR_FETCH_PRODUCTS = 'ERROR_FETCH_PRODUCTS';
+export const ADD_PRODUCT_TO_CART = 'ADD_PRODUCT_TO_CART';
+export const REMOVE_PRODUCT_FROM_CART = 'REMOVE_PRODUCT_FROM_CART';
 
 // Actions
 export const UPDATE_VALUE = 'UPDATE_VALUE';
-export const INIT_PRODUCTS = 'products/INIT_PRODUCTS';
+export const INIT_PRODUCTS = 'INIT_PRODUCTS';
+
