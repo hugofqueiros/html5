@@ -1,0 +1,29 @@
+{
+  "projectName": "html5",
+  "projectOwner": "hugofqueiros",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "contributors": [
+    {
+      "login": "hugofqueiros",
+      "name": "Hugo Queirós",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/3790397?v=4",
+      "profile": "http://hugofqueiros.com",
+      "contributions": [
+        "code",
+        "design",
+        "doc",
+        "example",
+        "ideas",
+        "infra",
+        "test",
+        "tool"
+      ]
+    }
+  ]
+}
