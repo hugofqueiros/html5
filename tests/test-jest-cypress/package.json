@@ -1,0 +1,50 @@
+{
+  "name": "test-jest-cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "add-contributor": "all-contributors add",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "all-contributors-cli": "^4.11.0",
+    "as-a": "^1.3.1",
+    "babel-polyfill": "^6.26.0",
+    "cypress": "^2.1.0",
+    "eslint": "^4.18.1",
+    "eslint-config-kentcdodds": "^13.0.1",
+    "eslint-plugin-cypress": "^2.0.1",
+    "jest": "^22.4.2",
+    "prettier": "^1.11.1"
+  },
+  "eslintConfig": {
+    "extends": [
+      "kentcdodds",
+      "kentcdodds/jest",
+      "kentcdodds/react"
+    ],
+    "rules": {
+      "require-await": "off",
+      "import/prefer-default-export": "off",
+      "babel/new-cap": "off",
+      "import/no-unassigned-import": "off",
+      "react/prop-types": "off",
+      "no-console": "warn",
+      "no-nested-ternary": "off",
+      "jest/no-disabled-tests": "off",
+      "complexity": [
+        "error",
+        12
+      ]
+    }
+  },
+  "eslintIgnore": [
+    "node_modules",
+    "build",
+    "dist",
+    "coverage"
+  ]
+}
