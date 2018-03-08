@@ -1,7 +1,7 @@
 <template>
     <b-container fluid>
         <img src="../assets/logo.png">
-        <h1>Supermarket X app</h1>
+        <h1 class="app-title">Supermarket X app</h1>
         <h3>Buy all your products online</h3>
         <hr>
         <p>Current value on your cart: {{ total | currency }}</p>
