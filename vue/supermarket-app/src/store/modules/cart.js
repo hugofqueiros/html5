@@ -10,15 +10,12 @@ const mutations = {
 };
 
 const actions = {
-    addProductToCard({commit}, productId) {
-        commit(ADD_PRODUCT_TO_CART, productId);
+    addProductToCard({commit}, product) {
+        commit(ADD_PRODUCT_TO_CART, product);
     },
     removeProductFromCard({state, commit}, productId) {
-        const index = state.listOfCart.indexOf(productId);
-        if (index > -1) {
-            const list = state.listOfCart.splice(index, 1);
-            commit(REMOVE_PRODUCT_FROM_CART, list);
-        }
+        const list = state.listOfCart.filter(item => item.id !== productId);
+        commit(REMOVE_PRODUCT_FROM_CART, list);
     }
 };
 

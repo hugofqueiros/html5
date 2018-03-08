@@ -4,22 +4,23 @@
         <h1>Supermarket X app</h1>
         <h3>Buy all your products online</h3>
         <hr>
-        <p>Your funds: {{ total | currency }}</p>
+        <p>Current value on your cart: {{ total | currency }}</p>
     </b-container>
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+import { VALUE } from '../store/types';
 
 export default {
     data() {
         return {
-            wallet: 100
         };
     },
     computed: {
-        total() {
-            return this.wallet;
-        }
+        ...mapGetters({
+            total: VALUE
+        })
     }
 };
 </script>

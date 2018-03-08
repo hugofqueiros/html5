@@ -29,12 +29,19 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+import { VALUE } from '../store/types';
+
 export default {
     data() {
         return {
-            title: 'Supermarket App',
-            total: 100
+            title: 'Supermarket App'
         };
+    },
+    computed: {
+        ...mapGetters({
+            total: VALUE
+        })
     }
 };
 </script>

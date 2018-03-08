@@ -3,6 +3,7 @@ import Router from 'vue-router';
 
 import Home from '../components/Home';
 import Products from '../components/products/Products';
+import Cart from '../components/cart/Cart';
 
 Vue.use(Router);
 
@@ -17,6 +18,10 @@ export default new Router({
         path: '/products',
         name: 'products',
         component: Products
+    }, {
+        path: '/cart',
+        name: 'cart',
+        component: Cart
     }],
     scrollBehavior(to, from, savedPosition) {
         if (savedPosition) return savedPosition;
