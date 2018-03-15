@@ -9,6 +9,7 @@ const surveyTemplate = require('../services/emailTemplates/surveyTemplate');
 
 const Survey = mongoose.model('surveys');
 
+// only for to /api/surveys ir logged in
 module.exports = (app) => {
     app.get('/api/surveys', requireLogin, async (req, res) => {
         const surveys = await Survey.find({ _user: req.user.id }).select({
@@ -58,6 +59,7 @@ module.exports = (app) => {
         res.send({});
     });
 
+    // pass through middlewares
     app.post('/api/surveys', requireLogin, requireCredits, async (req, res) => {
         const { title, subject, body, recipients } = req.body;
 
