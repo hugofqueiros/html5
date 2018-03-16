@@ -8,3 +8,5 @@ App Flow
 - Surveyees click on link in email to provide feedback  (Email Provider + Express + Mongo)
 - we tabulate feedback                                  (Mongo?)
 - User can see report all survey responses              (Mongo + React + Redux)
+
+.env files to set enviromental variables

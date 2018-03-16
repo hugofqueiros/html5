@@ -7,17 +7,20 @@ class Header extends Component {
     renderContent() {
         switch (this.props.auth) {
             case null:
+                console.log('Still deciding');
                 return;
             case false:
+                console.log('user is signed out of the application')
                 return (
                     <li>
                         <a href="/auth/google">Login With Google</a>
                     </li>
                 );
             default:
+                console.log('wwwot:', this.props.auth);
                 return [
                     <li key="1">
-                        <Payments />
+                        <p>ADD component Payments</p>
                     </li>,
                     <li key="3" style={{ margin: '0 10px' }}>
                         Credits: {this.props.auth.credits}
