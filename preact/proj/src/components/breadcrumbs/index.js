@@ -12,3 +12,5 @@ export const Breadcrumbs = ({ breadcrumbs = [] }) => (
         )) }
     </ol>
 );
+
+export default Breadcrumbs;
