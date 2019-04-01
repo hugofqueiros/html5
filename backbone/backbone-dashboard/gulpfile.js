@@ -341,7 +341,7 @@ gulp.task('copy:dist', function () {
 	//var css = gulp.src(['build/styles/style.*'])
 	var css = gulp.src(['build/styles/style.*', '!build/styles/style.css.map'])
 			.pipe(p.size({title: 'CSS minified', showFiles: true}))
-			.pipe(p.zopfli()) // gzip
+			// .pipe(p.zopfli()) // gzip
 			.pipe(gulp.dest('build/styles/'))
 			.pipe(p.size({title: 'CSS gziped  ', showFiles: true}));
 
@@ -360,8 +360,8 @@ gulp.task('concat:dist', function () {
 			//.pipe(p.sourcemaps.write('.', {includeContent: false, sourceRoot: '.'}))
 			.pipe(p.size({title: 'JS minified', showFiles: true}))
 			.pipe(gulp.dest('build/scripts'))
-			.pipe(p.zopfli())
-			.pipe(gulp.dest('build/scripts'))
+			// .pipe(p.zopfli())
+			// .pipe(gulp.dest('build/scripts'))
 			.pipe(p.size({title: 'JS gziped  ', showFiles: true}));
 	return stream;
 });
