@@ -23,3 +23,15 @@ and
 ```bash
 cd final/client && npm i && npm start
 ```
+
+apollographql engine:
+
+Then start your GraphQL server and run the following command:
+
+$ npx apollo service:push \
+--endpoint=<your graphql endpoint here>
+
+deploy the graphQL API
+npx now
+
+npx now ls
