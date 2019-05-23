@@ -41,6 +41,21 @@ class LaunchAPI extends RESTDataSource {
     };
   }
 
+  /**
+   * getting launchbyid over http:
+   *
+   * doing, in the playground:
+   * {
+        launch(id:1) {
+        site
+        }
+    }
+   *
+   * same as:
+   *
+   * localhost:4000/?query={launch(id:1){site}}
+   * @param {*} param0
+   */
   async getLaunchById({ launchId }) {
     const response = await this.get('launches', { flight_number: launchId });
     return this.launchReducer(response[0]);
