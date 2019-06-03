@@ -5,8 +5,8 @@
     "../src/App.svelte"
   ],
   "sourcesContent": [
-    "<script>\n    export let name;\n    export let age;\n\n    function incrementAge() {\n        age += 1;\n    }\n</script>\n\n<style>\n\th1 {\n\t\tcolor: purple;\n\t}\n</style>\n\n<h1>Hello {name}, my age is {age}!</h1>\n<button on:click={incrementAge}>Change Age</button>\n"
+    "<script>\n    let name = 'Hugo';\n    export let age = 20;\n\n    $: uppercaseName = name.toUpperCase();\n    $: console.log(name);\n    $: if (name === 'Whatever') {\n        age = 40;\n    }\n\n    function incrementAge() {\n        age += 1;\n    }\n\n    function changeName() {\n        name = 'Whatever'\n    }\n\n    function nameInput(e) {\n        const value = e.target.value;\n        name = value;\n    }\n</script>\n\n<style>\n\th1 {\n\t\tcolor: purple;\n\t}\n</style>\n\n<h1>Hello {uppercaseName}, my age is {age}!</h1>\n<button on:click={incrementAge}>Change Age</button>\n<button on:click={changeName}>Change Name</button>\n<input type=\"text\" value={name} on:input={nameInput}>\n<input type=\"text\" bind:value={name}>\n"
   ],
   "names": [],
-  "mappings": "AAUC,EAAE,cAAC,CAAC,AACH,KAAK,CAAE,MAAM,AACd,CAAC"
+  "mappings": "AAyBC,EAAE,cAAC,CAAC,AACH,KAAK,CAAE,MAAM,AACd,CAAC"
 }

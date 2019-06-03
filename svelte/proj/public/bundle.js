@@ -47,6 +47,12 @@ var app = (function () {
         node.addEventListener(event, handler, options);
         return () => node.removeEventListener(event, handler, options);
     }
+    function attr(node, attribute, value) {
+        if (value == null)
+            node.removeAttribute(attribute);
+        else
+            node.setAttribute(attribute, value);
+    }
     function children(element) {
         return Array.from(element.childNodes);
     }
@@ -241,23 +247,42 @@ var app = (function () {
     const file = "src/App.svelte";
 
     function create_fragment(ctx) {
-    	var h1, t0, t1, t2, t3, t4, t5, button, dispose;
+    	var h1, t0, t1, t2, t3, t4, t5, button0, t7, button1, t9, input0, t10, input1, dispose;
 
     	return {
     		c: function create() {
     			h1 = element("h1");
     			t0 = text("Hello ");
-    			t1 = text(ctx.name);
+    			t1 = text(ctx.uppercaseName);
     			t2 = text(", my age is ");
     			t3 = text(ctx.age);
     			t4 = text("!");
     			t5 = space();
-    			button = element("button");
-    			button.textContent = "Change Age";
+    			button0 = element("button");
+    			button0.textContent = "Change Age";
+    			t7 = space();
+    			button1 = element("button");
+    			button1.textContent = "Change Name";
+    			t9 = space();
+    			input0 = element("input");
+    			t10 = space();
+    			input1 = element("input");
     			h1.className = "svelte-i7qo5m";
-    			add_location(h1, file, 15, 0, 160);
-    			add_location(button, file, 16, 0, 200);
-    			dispose = listen(button, "click", ctx.incrementAge);
+    			add_location(h1, file, 30, 0, 451);
+    			add_location(button0, file, 31, 0, 500);
+    			add_location(button1, file, 32, 0, 552);
+    			attr(input0, "type", "text");
+    			input0.value = ctx.name;
+    			add_location(input0, file, 33, 0, 603);
+    			attr(input1, "type", "text");
+    			add_location(input1, file, 34, 0, 657);
+
+    			dispose = [
+    				listen(button0, "click", ctx.incrementAge),
+    				listen(button1, "click", ctx.changeName),
+    				listen(input0, "input", ctx.nameInput),
+    				listen(input1, "input", ctx.input1_input_handler)
+    			];
     		},
 
     		l: function claim(nodes) {
@@ -272,17 +297,31 @@ var app = (function () {
     			append(h1, t3);
     			append(h1, t4);
     			insert(target, t5, anchor);
-    			insert(target, button, anchor);
+    			insert(target, button0, anchor);
+    			insert(target, t7, anchor);
+    			insert(target, button1, anchor);
+    			insert(target, t9, anchor);
+    			insert(target, input0, anchor);
+    			insert(target, t10, anchor);
+    			insert(target, input1, anchor);
+
+    			input1.value = ctx.name;
     		},
 
     		p: function update(changed, ctx) {
-    			if (changed.name) {
-    				set_data(t1, ctx.name);
+    			if (changed.uppercaseName) {
+    				set_data(t1, ctx.uppercaseName);
     			}
 
     			if (changed.age) {
     				set_data(t3, ctx.age);
     			}
+
+    			if (changed.name) {
+    				input0.value = ctx.name;
+    			}
+
+    			if (changed.name && (input1.value !== ctx.name)) input1.value = ctx.name;
     		},
 
     		i: noop,
@@ -292,55 +331,76 @@ var app = (function () {
     			if (detaching) {
     				detach(h1);
     				detach(t5);
-    				detach(button);
+    				detach(button0);
+    				detach(t7);
+    				detach(button1);
+    				detach(t9);
+    				detach(input0);
+    				detach(t10);
+    				detach(input1);
     			}
 
-    			dispose();
+    			run_all(dispose);
     		}
     	};
     }
 
     function instance($$self, $$props, $$invalidate) {
-    	let { name, age } = $$props;
+    	let name = 'Hugo';
+        let { age = 20 } = $$props;
 
         function incrementAge() {
             $$invalidate('age', age += 1);
         }
 
-    	const writable_props = ['name', 'age'];
+        function changeName() {
+            $$invalidate('name', name = 'Whatever');
+        }
+
+        function nameInput(e) {
+            const value = e.target.value;
+            $$invalidate('name', name = value);
+        }
+
+    	const writable_props = ['age'];
     	Object.keys($$props).forEach(key => {
     		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<App> was created with unknown prop '${key}'`);
     	});
 
+    	function input1_input_handler() {
+    		name = this.value;
+    		$$invalidate('name', name);
+    	}
+
     	$$self.$set = $$props => {
-    		if ('name' in $$props) $$invalidate('name', name = $$props.name);
     		if ('age' in $$props) $$invalidate('age', age = $$props.age);
     	};
 
-    	return { name, age, incrementAge };
+    	let uppercaseName;
+
+    	$$self.$$.update = ($$dirty = { name: 1 }) => {
+    		if ($$dirty.name) { $$invalidate('uppercaseName', uppercaseName = name.toUpperCase()); }
+    		if ($$dirty.name) { console.log(name); }
+    		if ($$dirty.name) { if (name === 'Whatever') {
+                    $$invalidate('age', age = 40);
+                } }
+    	};
+
+    	return {
+    		name,
+    		age,
+    		incrementAge,
+    		changeName,
+    		nameInput,
+    		uppercaseName,
+    		input1_input_handler
+    	};
     }
 
     class App extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance, create_fragment, safe_not_equal, ["name", "age"]);
-
-    		const { ctx } = this.$$;
-    		const props = options.props || {};
-    		if (ctx.name === undefined && !('name' in props)) {
-    			console.warn("<App> was created without expected prop 'name'");
-    		}
-    		if (ctx.age === undefined && !('age' in props)) {
-    			console.warn("<App> was created without expected prop 'age'");
-    		}
-    	}
-
-    	get name() {
-    		throw new Error("<App>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set name(value) {
-    		throw new Error("<App>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    		init(this, options, instance, create_fragment, safe_not_equal, ["age"]);
     	}
 
     	get age() {
