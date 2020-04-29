@@ -112,7 +112,7 @@
     "emoji": "^0.3.2",
     "jasmine": "^2.3.2",
     "jasmine-core": "^2.3.4",
-    "jquery": "^2.1.4",
+    "jquery": "^3.5.0",
     "lodash": "^3.10.1",
     "nanoscroller": "^0.8.7",
     "rusha": "^0.8.3",
