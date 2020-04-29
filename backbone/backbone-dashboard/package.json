@@ -131,7 +131,7 @@
     "inherits": "~2.0.1",
     "intl": "~1.0.0",
     "istanbul": "~0.4.0",
-    "jquery": "~2.1.4",
+    "jquery": "~3.5.0",
     "jquery-i18next": "0.0.9",
     "lodash": "~3.10.1",
     "metismenu": "~2.2.0",
