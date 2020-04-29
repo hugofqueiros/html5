@@ -104,7 +104,7 @@
     "express": "^4.13.4",
     "express-useragent": "^0.2.4",
     "font-awesome": "^4.5.0",
-    "jquery": "^2.2.3",
+    "jquery": "^3.5.0",
     "lodash": "^4.8.2",
     "pem": "^1.8.1",
     "ui-router": "^1.0.0-alpha0"
