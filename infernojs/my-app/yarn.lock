@@ -2117,7 +2117,7 @@ fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
 
-fsevents@1.0.15, fsevents@^1.0.0:
+fsevents@^1.0.0:
   version "1.0.15"
   resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-1.0.15.tgz#fa63f590f3c2ad91275e4972a6cea545fb0aae44"
   dependencies:
@@ -2435,55 +2435,6 @@ inferno-dev-utils@^0.5.1:
     opn "4.0.2"
     sockjs-client "1.1.1"
     strip-ansi "3.0.1"
-
-inferno-scripts@0.10.2:
-  version "0.10.2"
-  resolved "https://registry.yarnpkg.com/inferno-scripts/-/inferno-scripts-0.10.2.tgz#7b1b393f0642a7f8b99623db22fd9006b0f556f9"
-  dependencies:
-    autoprefixer "6.6.1"
-    babel-core "6.21.0"
-    babel-eslint "7.1.1"
-    babel-jest "18.0.0"
-    babel-loader "6.2.10"
-    babel-preset-inferno-app "^1.3.0"
-    case-sensitive-paths-webpack-plugin "1.1.4"
-    chalk "1.1.3"
-    connect-history-api-fallback "1.3.0"
-    cross-spawn "5.0.1"
-    css-loader "0.26.1"
-    detect-port "1.0.7"
-    dotenv "2.0.0"
-    eslint "3.12.2"
-    eslint-config-inferno-app "^0.4.0"
-    eslint-loader "1.6.1"
-    eslint-plugin-flowtype "2.29.2"
-    eslint-plugin-import "2.2.0"
-    eslint-plugin-inferno "6.8.0"
-    eslint-plugin-jsx-a11y "3.0.2"
-    extract-text-webpack-plugin "1.0.1"
-    file-loader "0.9.0"
-    filesize "3.3.0"
-    fs-extra "1.0.0"
-    gzip-size "3.0.0"
-    html-webpack-plugin "2.24.1"
-    http-proxy-middleware "0.17.3"
-    inferno-dev-utils "^0.5.1"
-    jest "18.1.0"
-    json-loader "0.5.4"
-    object-assign "4.1.0"
-    path-exists "3.0.0"
-    postcss-loader "1.2.1"
-    promise "7.1.1"
-    recursive-readdir "2.1.0"
-    strip-ansi "3.0.1"
-    style-loader "0.13.1"
-    url-loader "0.5.7"
-    webpack "1.14.0"
-    webpack-dev-server "1.16.2"
-    webpack-manifest-plugin "1.1.0"
-    whatwg-fetch "2.0.1"
-  optionalDependencies:
-    fsevents "1.0.15"
 
 inferno-vnode-flags@^1.0.7:
   version "1.1.1"
@@ -3320,8 +3271,8 @@ merge-descriptors@1.0.1:
   resolved "https://registry.yarnpkg.com/merge-descriptors/-/merge-descriptors-1.0.1.tgz#b00aaa556dd8b44568150ec9d1b953f3f90cbb61"
 
 merge@^1.1.3:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/merge/-/merge-1.2.0.tgz#7531e39d4949c281a66b8c5a6e0265e8b05894da"
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/merge/-/merge-1.2.1.tgz#38bebf80c3220a8a487b6fcfb3941bb11720c145"
 
 methods@~1.1.2:
   version "1.1.2"
