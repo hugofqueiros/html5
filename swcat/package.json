@@ -65,7 +65,7 @@
     "backbone": "^1.2.1",
     "backbone.marionette": "^2.4.2",
     "bootstrap": "^3.3.5",
-    "jquery": "^2.1.4",
+    "jquery": "^3.5.0",
     "lodash": "^3.10.0",
     "microplugin": "0.0.3",
     "moment": "^2.10.3",
